@@ -1,0 +1,4 @@
+level,class_with_highest_observed_median,highest_observed_median_pct,cardboard_highest_observed,cardboard_significantly_higher_than_all_five_after_holm
+low,cardboard,14.29274029765779,True,True
+medium,cardboard,31.342608420124964,True,True
+high,cardboard,50.761197201463574,True,True

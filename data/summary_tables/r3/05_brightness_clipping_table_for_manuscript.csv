@@ -1,0 +1,4 @@
+level,brightness_factor,n_images,preexisting_saturated_pixels_percent,saturated_pixels_after_transform_percent,newly_clipped_pixels_percent,per_image_median_iqr_percent
+low,1.2,2527,0.5860484034794017,29.81115858719321,29.225110183713806,"29.66 [16.65, 40.15]"
+medium,1.4,2527,0.5860484034794017,53.667956665345,53.0819082618656,"54.49 [43.32, 65.00]"
+high,1.6,2527,0.5860484034794017,69.4437151517517,68.85766674827231,"71.14 [60.73, 80.69]"

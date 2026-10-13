@@ -1,0 +1,3 @@
+metric,mean_difference_png_minus_jpg,mean_absolute_difference,significant_cells_after_holm,total_cells,direct_jpg_png_embedding_cosine_mean,direct_jpg_png_embedding_cosine_minimum
+cosine_similarity,0.0002,0.0022,56,60,0.9985,0.9949
+relative_euclidean_distance,0.0029,0.0105,53,60,0.9985,0.9949

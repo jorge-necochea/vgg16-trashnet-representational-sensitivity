@@ -1,0 +1,13 @@
+metric,block,ordering_from_least_to_greatest_sensitivity,n,pct
+Angular sensitivity (1 - cosine),Block3,low < medium < high,2301,91.05658884052235
+Angular sensitivity (1 - cosine),Block3,low < high < medium,226,8.943411159477641
+Angular sensitivity (1 - cosine),Block5,low < medium < high,2216,87.69291650178077
+Angular sensitivity (1 - cosine),Block5,low < high < medium,305,12.069647803719826
+Angular sensitivity (1 - cosine),Block5,medium < low < high,5,0.19786307874950534
+Angular sensitivity (1 - cosine),Block5,high < low < medium,1,0.03957261574990107
+Relative Euclidean distance,Block3,low < medium < high,2372,93.86624455876533
+Relative Euclidean distance,Block3,low < high < medium,155,6.1337554412346655
+Relative Euclidean distance,Block5,low < medium < high,2083,82.42975860704392
+Relative Euclidean distance,Block5,low < high < medium,440,17.411950929956472
+Relative Euclidean distance,Block5,medium < low < high,3,0.1187178472497032
+Relative Euclidean distance,Block5,high < low < medium,1,0.03957261574990107

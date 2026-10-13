@@ -1,0 +1,36 @@
+{
+  "analysis": "R1 baseline-adjusted VGG16 representational sensitivity and centered linear CKA",
+  "seed": 2026,
+  "python": "3.13.15",
+  "numpy": "2.1.3",
+  "pandas": "2.2.3",
+  "torch": "2.11.0+cu130",
+  "torchvision": "0.26.0+cu130",
+  "device": "cuda",
+  "weights": "VGG16_Weights.IMAGENET1K_V1",
+  "preprocessing": "Compose(\n    Resize(size=(224, 224), interpolation=bilinear, max_size=None, antialias=True)\n    ToTensor()\n    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n)",
+  "layer_indices": {
+    "Block1": 3,
+    "Block2": 8,
+    "Block3": 15,
+    "Block4": 22,
+    "Block5": 29
+  },
+  "embedding_dimensions": {
+    "Block1": 64,
+    "Block2": 128,
+    "Block3": 256,
+    "Block4": 512,
+    "Block5": 512
+  },
+  "total_original_images": 2527,
+  "baseline_pairs_per_type": 100000,
+  "baseline_pair_types": [
+    "random",
+    "same_class",
+    "different_class"
+  ],
+  "baseline_for_adjustment": "median cosine similarity of seeded unrestricted random pairs within each block",
+  "adjusted_sensitivity_formula": "(1 - original_transformed_cosine) / (1 - random_pair_block_median)",
+  "cka": "centered linear CKA"
+}

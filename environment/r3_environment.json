@@ -1,0 +1,20 @@
+{
+  "seed": 2026,
+  "python": "3.13.16",
+  "pillow": "11.3.0",
+  "torch": "2.11.0+cpu",
+  "torchvision": "0.26.0+cpu",
+  "brightness_factors": {
+    "low": 1.2,
+    "medium": 1.4,
+    "high": 1.6
+  },
+  "total_original_images": 2527,
+  "original_dimensions": [
+    512,
+    384
+  ],
+  "transformation_order": "load 512x384 RGB -> apply transformation -> save 512x384 PNG -> direct Resize((224,224)) -> tensor -> ImageNet normalization",
+  "aspect_ratio_preserved_at_model_input": false,
+  "clipping_primary_definition": "pixel with at least one RGB channel equal to 255"
+}

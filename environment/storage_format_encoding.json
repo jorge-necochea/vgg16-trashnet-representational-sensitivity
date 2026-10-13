@@ -1,0 +1,19 @@
+{
+  "analysis": "balanced 822-image JPG transformation generation",
+  "source_notebook": "notebooks/00_generate_transformations_822_jpg_original.ipynb",
+  "images_per_class": 137,
+  "classes": 6,
+  "source_format": "original TrashNet JPEG files",
+  "output_filename_rule": "original filename and .jpg extension retained",
+  "save_call": "transformed.save(output_path)",
+  "format_selection": "Pillow inferred JPEG from the .jpg extension",
+  "encoder_interface": "Pillow Image.save JPEG writer",
+  "quality_argument_supplied": false,
+  "effective_quality": 75,
+  "quality_basis": "Pillow documented default when JPEG quality is omitted",
+  "subsampling_argument_supplied": false,
+  "optimize_argument_supplied": false,
+  "progressive_argument_supplied": false,
+  "historical_pillow_version": "not recorded by the original notebook",
+  "historical_libjpeg_or_libjpeg_turbo_version": "not recorded by the original notebook"
+}

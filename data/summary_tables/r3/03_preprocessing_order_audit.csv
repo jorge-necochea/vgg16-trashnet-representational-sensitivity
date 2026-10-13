@@ -1,0 +1,5 @@
+stage,dimensions,aspect_ratio,operation,aspect_ratio_preserved
+Original files,512 x 384,4:3 (1.333),Load original JPEG and convert to RGB,True
+Controlled transformation,512 x 384,4:3 (1.333),"Brightness/contrast; rotation with bilinear interpolation, expand=False, fill=0; or center crop followed by bilinear resize",True
+Stored transformed file,512 x 384,4:3 (1.333),Save transformed image as PNG,True
+VGG-16 input,224 x 224,1:1 (1.000),"Direct Resize((224, 224)), ToTensor, ImageNet normalization; no center crop",False

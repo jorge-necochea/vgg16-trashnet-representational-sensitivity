@@ -1,0 +1,9 @@
+transformation,metric,block,kendall_w,expected_order_n,expected_order_pct
+brightness,Angular sensitivity (1 - cosine),Block5,0.9960471232023782,2519,99.6834190740008
+brightness,Relative Euclidean distance,Block5,0.9944750239166117,2516,99.56470122675108
+contrast,Angular sensitivity (1 - cosine),Block5,0.9996044304416929,2526,99.9604273842501
+contrast,Relative Euclidean distance,Block5,0.9984196009570712,2523,99.8417095370004
+rotation,Angular sensitivity (1 - cosine),Block5,0.8906142117838066,2216,87.69291650178077
+rotation,Relative Euclidean distance,Block5,0.8538256164644628,2083,82.42975860704392
+zoom,Angular sensitivity (1 - cosine),Block5,0.9984181915643456,2523,99.8417095370004
+zoom,Relative Euclidean distance,Block5,0.997627522245307,2521,99.76256430550059

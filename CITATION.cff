@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or the derived data, please cite the associated article and this repository."
+title: "VGG-16 TrashNet Representational Sensitivity"
+type: software
+authors:
+  - family-names: "Necochea-Chamorro"
+    given-names: "Jorge Isaac"
+repository-code: "https://github.com/jorge-necochea/vgg16-trashnet-representational-sensitivity"
+date-released: 2026-10-12
+license: MIT

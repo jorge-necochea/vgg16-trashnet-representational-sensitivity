@@ -1,0 +1,29 @@
+{
+  "source": "See repository README and notebook configuration cell.",
+  "rows": 151620,
+  "expected_rows": 151620,
+  "row_count_ok": true,
+  "required_columns_ok": true,
+  "duplicate_keys": 0,
+  "missing_metric_values": 0,
+  "images": 2527,
+  "transformations": [
+    "brightness",
+    "contrast",
+    "rotation",
+    "zoom"
+  ],
+  "levels": [
+    "high",
+    "low",
+    "medium"
+  ],
+  "blocks": [
+    "Block1",
+    "Block2",
+    "Block3",
+    "Block4",
+    "Block5"
+  ],
+  "passed": true
+}

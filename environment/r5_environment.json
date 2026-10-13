@@ -1,0 +1,25 @@
+{
+  "input_metrics_csv": "See repository README and notebook configuration cell.",
+  "dataset_root": "See repository README and notebook configuration cell.",
+  "original_images": 2527,
+  "merged_analysis_rows": 7581,
+  "valid_object_extent_n": 2527,
+  "valid_object_extent_pct": 100.0,
+  "previous_result_rho_max_abs_difference": 0.0007229002519524852,
+  "previous_result_median_max_abs_difference_pp": 0.11725970234220995,
+  "versions": {
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "opencv": "5.0.0",
+    "Pillow": "11.3.0",
+    "matplotlib": "3.10.0",
+    "seaborn": "0.13.2",
+    "statsmodels": "0.15.0",
+    "random_seed": 2026,
+    "bootstrap_replicates_median": 2000,
+    "bootstrap_replicates_partial_correlation": 1000
+  }
+}
