@@ -12,9 +12,11 @@ from the released source tables and figures below.
 - R5 cross-class peripheral-gradient, object-extent, partial-correlation, and
   interaction analyses: `data/summary_tables/r5/`, `figures/r5/`, and the
   image-level source files in `data/derived_metrics/r5/`.
-- The aggregate matched JPG–PNG result currently recoverable from the
-  manuscript is in `data/summary_tables/storage_format_aggregate_summary.csv`.
+- The aggregate and complete matched JPG–PNG results are in
+  `data/summary_tables/storage_format_aggregate_summary.csv` and
+  `data/summary_tables/storage_format_matched_822_complete.csv`, respectively.
 
-The final supplementary document must not duplicate main-text figures unless
-the journal specifically requests it. The detailed 60-cell JPG–PNG table
-should be added if its original source CSV is recovered.
+`Supplementary_Materials_VGG16_TrashNet_Revised.docx` is the assembled
+supplementary document prepared for journal resubmission. Main-text figures
+are not duplicated except where historical subset results serve as a defined
+secondary analysis.

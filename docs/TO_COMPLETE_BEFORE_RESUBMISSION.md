@@ -1,15 +1,9 @@
 # Do not forget before journal resubmission
 
-1. Update the Methods and response to R6 with the recovered JPG settings:
-   Pillow `Image.save()`, implicit JPEG quality 75, and no explicitly supplied
-   subsampling, optimization, or progressive option. State that the exact
-   historical Pillow/libjpeg version was not logged.
-2. Push the final repository to GitHub.
-3. Create a Zenodo release and replace `[DOI to be added]` in the Data
-   Availability Statement.
-4. Add the final repository URL and Zenodo DOI to the manuscript and response
-   letter.
-5. Add the detailed 822 JPG–PNG derived comparison table if the original CSV
-   is recovered. The current assembled files contain only the aggregate
-   storage-format summary reported in the manuscript, not the 60-cell source
-   table.
+1. Upload the final R6 repository update to GitHub.
+2. Confirm that the public repository opens without authentication and that the
+   notebooks, manifests, derived metrics, environment records, and detailed
+   JPG–PNG comparison table are visible.
+3. Use the final GitHub URL in the revised manuscript and response letter.
+4. Optionally create a Zenodo release after the GitHub version is final and add
+   the DOI during revision or proof correction.

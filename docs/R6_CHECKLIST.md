@@ -6,5 +6,5 @@
 | State that TrashNet sources are JPEG | `README.md`, `docs/DATA_AVAILABILITY.md`, `docs/REPRODUCIBILITY.md` | Complete |
 | Software and library versions | `environment/` and `environment/requirements.txt` | Complete |
 | Random seeds | Environment records and notebooks | Complete |
-| Public code and derived data | This repository | Complete after GitHub upload |
-| Public archival DOI | Zenodo release | Pending until the GitHub release is archived |
+| Public code and derived data | Public GitHub repository | Complete |
+| Public archival DOI | Zenodo release | Optional; not required to satisfy R6 because the GitHub release is public |

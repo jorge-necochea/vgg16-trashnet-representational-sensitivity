@@ -42,6 +42,9 @@ original tables without sampling or loss of numeric precision. Pandas reads
 them directly with `pd.read_csv(path)` because compression is inferred from
 the filename.
 
+The storage-format release includes both the aggregate summary and the complete
+matched JPG–PNG table used in Supplementary Table S3.
+
 ## Original data
 
 TrashNet is publicly available at:

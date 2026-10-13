@@ -22,6 +22,18 @@ manifest = pd.read_csv(ROOT / 'data/manifests/transformation_manifest_complete.c
 if len(manifest) != 2527 * 12:
     errors.append(f'Manifest rows: {len(manifest)} instead of {2527 * 12}')
 
+storage = pd.read_csv(ROOT / 'data/summary_tables/storage_format_matched_822_complete.csv')
+if len(storage) != 180:
+    errors.append(f'Storage-format table rows: {len(storage)} instead of 180')
+required_storage_columns = {
+    'Metric', 'Transformation', 'Intensity', 'Block', 'n',
+    'Mean difference PNG-JPG', 'Mean absolute difference',
+    'Rank-biserial r', 'Holm-adjusted p', 'Significant after Holm'
+}
+missing_storage_columns = required_storage_columns.difference(storage.columns)
+if missing_storage_columns:
+    errors.append('Missing storage-format columns: ' + ', '.join(sorted(missing_storage_columns)))
+
 required_notebooks = [
     '00_generate_transformations_822_jpg_original.ipynb',
     '01_extract_vgg16_metrics_complete_dataset.ipynb',
@@ -45,3 +57,4 @@ print('Repository validation passed.')
 print('Main metric rows:', len(main))
 print('Images:', main['image_id'].nunique())
 print('Manifest rows:', len(manifest))
+print('Storage-format rows:', len(storage))
