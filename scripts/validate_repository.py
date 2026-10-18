@@ -1,60 +1,113 @@
-from __future__ import annotations
+"""Integrity and numerical-consistency checks for the public VGG-16 dataset.
 
+Run from repository root: python scripts/validate_repository.py
+Checks existing derived data and published checksums; DOES NOT rerun the model.
+"""
+from __future__ import annotations
+import csv
+import gzip
 import hashlib
 import json
 from pathlib import Path
-
+import numpy as np
 import pandas as pd
-
 
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
 
-main = pd.read_csv(ROOT / 'data/derived_metrics/main/embeddings_metrics_vgg16_trashnet_complete.csv.gz')
-if len(main) != 151620:
-    errors.append(f'Main metrics rows: {len(main)} instead of 151620')
-if main['image_id'].nunique() != 2527:
-    errors.append(f'Unique images: {main["image_id"].nunique()} instead of 2527')
-if main.duplicated(['image_id', 'transformation', 'level', 'block']).any():
-    errors.append('Duplicate main-metric keys detected')
+def check(condition: bool, message: str) -> None:
+    if not bool(condition): errors.append(message)
 
-manifest = pd.read_csv(ROOT / 'data/manifests/transformation_manifest_complete.csv.gz')
-if len(manifest) != 2527 * 12:
-    errors.append(f'Manifest rows: {len(manifest)} instead of {2527 * 12}')
+def load_csv(rel: str) -> pd.DataFrame:
+    try:
+        return pd.read_csv(ROOT / rel)
+    except Exception as exc:
+        errors.append(f"Could not read {rel}: {exc}")
+        return pd.DataFrame()
 
-storage = pd.read_csv(ROOT / 'data/summary_tables/storage_format_matched_822_complete.csv')
-if len(storage) != 180:
-    errors.append(f'Storage-format table rows: {len(storage)} instead of 180')
-required_storage_columns = {
-    'Metric', 'Transformation', 'Intensity', 'Block', 'n',
-    'Mean difference PNG-JPG', 'Mean absolute difference',
-    'Rank-biserial r', 'Holm-adjusted p', 'Significant after Holm'
-}
-missing_storage_columns = required_storage_columns.difference(storage.columns)
-if missing_storage_columns:
-    errors.append('Missing storage-format columns: ' + ', '.join(sorted(missing_storage_columns)))
+# Verify every gzip archive to the stream terminator (detects truncated archives).
+for path in sorted(ROOT.rglob('*.gz')):
+    try:
+        with gzip.open(path, 'rb') as source:
+            for chunk in iter(lambda: source.read(1024 * 1024), b''): pass
+    except Exception as exc:
+        errors.append(f"Invalid gzip: {path.relative_to(ROOT)}: {exc}")
 
-required_notebooks = [
-    '00_generate_transformations_822_jpg_original.ipynb',
-    '01_extract_vgg16_metrics_complete_dataset.ipynb',
-    '02_r1_baselines_adjusted_sensitivity_cka.ipynb',
-    '03_r3_brightness_clipping_preprocessing_audit.ipynb',
-    '04_r4_intensity_ordering_exceptions.ipynb',
-    '05_r5_peripheral_gradient_object_extent.ipynb',
-    '06_jpeg_encoding_audit.ipynb',
-]
-for name in required_notebooks:
-    path = ROOT / 'notebooks' / name
-    if not path.exists():
-        errors.append(f'Missing notebook: {name}')
-    else:
-        json.loads(path.read_text(encoding='utf-8'))
+# Verify every SHA-256 line; the manifest intentionally does not hash itself.
+manifest_file = ROOT / 'checksums.sha256'
+try:
+    listed = set()
+    for line in manifest_file.read_text(encoding='utf-8').splitlines():
+        if not line.strip(): continue
+        checksum, rel = line.split('  ', 1)
+        listed.add(rel)
+        path = ROOT / rel
+        if not path.is_file():
+            errors.append(f"Missing checksummed file: {rel}")
+            continue
+        sha = hashlib.sha256()
+        with path.open('rb') as source:
+            for chunk in iter(lambda: source.read(1024 * 1024), b''):
+                sha.update(chunk)
+        check(sha.hexdigest() == checksum, f"Checksum mismatch: {rel}")
+    actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob('*') if p.is_file() and p != manifest_file}
+    check(actual == listed, f"Checksum manifest coverage mismatch: missing={sorted(actual-listed)}, stale={sorted(listed-actual)}")
+except Exception as exc:
+    errors.append(f"Could not verify checksums: {exc}")
+
+main = load_csv('data/derived_metrics/main/embeddings_metrics_vgg16_trashnet_complete.csv.gz')
+r1 = load_csv('data/derived_metrics/r1/image_level_adjusted_sensitivity.csv.gz')
+if not main.empty and not r1.empty:
+    check(len(main) == 151620, f"Main metrics: {len(main)} rows; expected 151620")
+    check(len(r1) == 151620, f"R1 metrics: {len(r1)} rows; expected 151620")
+    expected_cols = ['image_id','original_filename','in_balanced_822','original_format','transformed_format','class','transformation','level','value','block','euclidean_distance','cosine_similarity','relative_euclidean_distance']
+    check(all(c in main.columns for c in expected_cols), 'Missing main-metric columns')
+    check(all(c in r1.columns for c in expected_cols + ['random_pair_baseline_median','baseline_adjusted_sensitivity']), 'Missing R1 columns')
+    if all(c in main.columns and c in r1.columns for c in expected_cols):
+        for col in expected_cols:
+            if pd.api.types.is_numeric_dtype(main[col]) and col != 'in_balanced_822':
+                check(np.allclose(main[col], r1[col], atol=1e-12, rtol=0, equal_nan=False), f"Main/R1 values differ: {col}")
+            else:
+                check(main[col].equals(r1[col]), f"Main/R1 rows differ: {col}")
+        check(main['image_id'].nunique() == 2527, 'Expected 2527 original images')
+        check(main['block'].nunique() == 5, 'Expected 5 blocks')
+        check(len(main[['transformation','level']].drop_duplicates()) == 12, 'Expected 12 conditions')
+        check(not main.duplicated(['image_id','transformation','level','block']).any(), 'Duplicate main rows')
+        check(main[expected_cols].isna().sum().sum() == 0, 'Null values in main metrics')
+    if all(c in r1.columns for c in ['cosine_similarity','random_pair_baseline_median','baseline_adjusted_sensitivity']):
+        formula=(1-r1['cosine_similarity'])/(1-r1['random_pair_baseline_median'])
+        check(np.allclose(formula, r1['baseline_adjusted_sensitivity'], atol=2e-8, rtol=0), 'R1 formula mismatch')
+        check(not r1.isna().any().any(), 'Null values in R1 metrics')
+
+manifest = load_csv('data/manifests/transformation_manifest_complete.csv.gz')
+if not manifest.empty:
+    check(len(manifest) == 30324, f'Transformation manifest: {len(manifest)} rows; expected 30324')
+    check(not manifest.duplicated(['class','original_filename','transformation','level']).any(), 'Duplicate transformation manifest keys')
+storage = load_csv('data/summary_tables/storage_format_matched_822_complete.csv')
+if not storage.empty:
+    check(len(storage) == 180, f'Storage table: {len(storage)} rows; expected 180')
+
+robust = ROOT / 'analysis/robustness822'
+for filename, expected in {'imagenes_seleccionadas.csv':822,'CKA_por_estrategia.csv':180,'baselines_por_estrategia.csv':45,'bloques_pico_sensibilidad_ajustada.csv':36,'sensibilidad_ajustada_por_estrategia.csv':180}.items():
+    df=load_csv(f'analysis/robustness822/{filename}')
+    if not df.empty: check(len(df) == expected, f'Robustness {filename}: expected {expected}, got {len(df)}')
+try:
+    metadata=json.loads((robust/'metadatos_robustez.json').read_text(encoding='utf-8'))
+    check(metadata.get('images') == 822 and metadata.get('rows_per_strategy') == 49320, 'Robustness metadata count mismatch')
+    check(set(metadata.get('strategies',[])) == {'stretch_original','no_padding','letterbox'}, 'Unexpected preprocessing strategy set')
+except Exception as exc:
+    errors.append(f'Invalid robustness metadata: {exc}')
+
+notebooks = sorted(ROOT.rglob('*.ipynb'))
+for path in notebooks:
+    try: json.loads(path.read_text(encoding='utf-8'))
+    except Exception as exc: errors.append(f'Invalid notebook {path.relative_to(ROOT)}: {exc}')
 
 if errors:
-    raise SystemExit('\n'.join(errors))
-
-print('Repository validation passed.')
-print('Main metric rows:', len(main))
-print('Images:', main['image_id'].nunique())
-print('Manifest rows:', len(manifest))
-print('Storage-format rows:', len(storage))
+    print('VALIDATION FAILED:')
+    for issue in errors: print(' -',issue)
+    raise SystemExit(1)
+print('PASS — integrity checks on all compressed files and published checksums')
+print('PASS — 151620 aligned main and R1 records; adjusted sensitivity formula')
+print('PASS — 30324 transformation manifest entries and 822-image robustness summaries')
+print('NOTE — this does not establish clean end-to-end notebook execution or regenerate embedding matrices')
