@@ -50,7 +50,9 @@ try:
             for chunk in iter(lambda: source.read(1024 * 1024), b''):
                 sha.update(chunk)
         check(sha.hexdigest() == checksum, f"Checksum mismatch: {rel}")
-    actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob('*') if p.is_file() and p != manifest_file}
+    actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob('*')
+              if p.is_file() and p != manifest_file
+              and '.git' not in p.relative_to(ROOT).parts}
     check(actual == listed, f"Checksum manifest coverage mismatch: missing={sorted(actual-listed)}, stale={sorted(listed-actual)}")
 except Exception as exc:
     errors.append(f"Could not verify checksums: {exc}")
