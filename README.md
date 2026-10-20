@@ -105,3 +105,27 @@ is not covered by these repository licenses.
 - Run `python scripts/validate_repository.py` for archive integrity, checksum coverage, and numerical consistency of the published files. The validator does not reconstruct model embeddings.
 
 **Known reproduction caveats:** The historical transformation-manifest path prefix `TrashNet_transformations_complete_png` differs from the Google Drive folder `TrashNet_transformaciones_completo_png`; resolve this mapping in the runtime before executing from the manifest. The historical notebook `01_extract_vgg16_metrics_complete_dataset.ipynb` skips already-existing condition CSV files based on row count alone; delete/segregate old outputs for a genuine rerun. Environment versions must be tested on the target clean Colab runtime. Do not infer all manuscript tables and figures are regenerated solely from a passing file-integrity validator. The finalized supplementary document should replace the existing DOCX once editorial review is complete.
+
+## Consolidated journal-revision alignment — 20 October 2026
+
+The active supplementary Word file at
+`supplementary_materials/Supplementary_Materials_VGG16_TrashNet_Revised.docx`
+contains Figures S1–S8 and **Tables S1–S13**; the three additional tables
+correspond to the matched 822-image aspect-ratio preprocessing experiment in
+`analysis/robustness822/`.
+
+**C7:** `data/summary_tables/storage_format_aggregate_summary.csv` now
+reports the direct JPG–PNG cosine once, explicitly distinguishing the 49,320-pair
+pooled mean (0.9985) from the minimum of 60 condition-by-block means (0.9949).
+Neither number is an individual-pair minimum.
+
+**C8:** the R5 Kruskal–Wallis effect size is eta squared based on H,
+`eta_squared_h = max(0, (H-k+1)/(n-k))`, not epsilon squared. The R5 notebook and
+output CSV have consistent names and **all original numerical values are
+unchanged**. Historical notebooks in `notebooks/originals/` remain unmodified.
+
+**Validation scope:** `python scripts/validate_repository.py` checks integrity,
+row counts, formulas, data conventions, and the consolidated Word supplement.
+It **does not** demonstrate independent end-to-end rerun of VGG-16 extraction.
+The public release must be checked after uploading this package; a local PASS
+is not proof of successful publication.

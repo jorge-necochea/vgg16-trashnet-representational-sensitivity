@@ -16,7 +16,11 @@ from the released source tables and figures below.
   `data/summary_tables/storage_format_aggregate_summary.csv` and
   `data/summary_tables/storage_format_matched_822_complete.csv`, respectively.
 
-`Supplementary_Materials_VGG16_TrashNet_Revised.docx` is the assembled
-supplementary document prepared for journal resubmission. Main-text figures
+`Supplementary_Materials_VGG16_TrashNet_Revised.docx` is the **consolidated
+20 October 2026 supplementary document** prepared for journal resubmission.
+It contains Figures S1–S8 and Tables **S1–S13**. Tables S11–S13 report the
+822-image aspect-ratio/preprocessing robustness control using the source files
+in `analysis/robustness822/`. The old S1–S10 file was superseded, not retained
+as a second active supplement. Main-text figures
 are not duplicated except where historical subset results serve as a defined
 secondary analysis.

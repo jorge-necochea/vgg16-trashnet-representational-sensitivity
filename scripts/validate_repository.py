@@ -103,6 +103,40 @@ for path in notebooks:
     try: json.loads(path.read_text(encoding='utf-8'))
     except Exception as exc: errors.append(f'Invalid notebook {path.relative_to(ROOT)}: {exc}')
 
+
+# C7 / C8 editorial result-label and formula validation
+c7 = load_csv('data/summary_tables/storage_format_aggregate_summary.csv')
+if not c7.empty:
+    check(len(c7) == 2, 'C7: expected exactly 2 primary-metric rows')
+    v_mean='direct_jpg_png_embedding_cosine_overall_mean_49320_pairs'
+    v_min='direct_jpg_png_embedding_cosine_minimum_of_60_cell_means'
+    check(all(x in c7.columns for x in (v_mean,v_min)), 'C7: missing explicit direct cosine labels')
+    if all(x in c7.columns for x in ('metric',v_mean,v_min)):
+        cosine=c7[c7['metric']=='cosine_similarity']
+        distance=c7[c7['metric']=='relative_euclidean_distance']
+        check(len(cosine)==1 and len(distance)==1, 'C7: incorrect metric rows')
+        if len(cosine)==1:
+            check(abs(cosine.iloc[0][v_mean]-0.9985)<0.00005, 'C7: pooled mean cosine mismatch')
+            check(abs(cosine.iloc[0][v_min]-0.9949)<0.00005, 'C7: minimum cell-mean cosine mismatch')
+        if len(distance)==1:
+            check(pd.isna(distance.iloc[0][v_mean]) and pd.isna(distance.iloc[0][v_min]), 'C7: duplicate direct JPG–PNG cosine in relative-distance row')
+c8 = load_csv('data/summary_tables/r5/07_gradient_class_omnibus_tests.csv')
+if not c8.empty:
+    check('eta_squared_h' in c8.columns and 'epsilon_squared' not in c8.columns, 'C8: effect-size column mislabelled')
+    if all(x in c8.columns for x in ('H','df','eta_squared_h')):
+        k=c8['df']+1
+        expected=np.maximum(0, (c8['H']-k+1)/(2527-k))
+        check(np.allclose(expected,c8['eta_squared_h'],atol=1e-12,rtol=0), 'C8: eta squared H values disagree with Kruskal–Wallis formula')
+try:
+    from zipfile import ZipFile
+    supplement=ROOT/'supplementary_materials/Supplementary_Materials_VGG16_TrashNet_Revised.docx'
+    with ZipFile(supplement) as doc:
+        source=doc.read('word/document.xml').decode('utf-8')
+        for label in ('S11','S12','S13'):
+            check(label in source, f'Missing consolidated supplemental table {label}')
+except Exception as exc:
+    errors.append(f'Could not inspect consolidated supplement: {exc}')
+
 if errors:
     print('VALIDATION FAILED:')
     for issue in errors: print(' -',issue)
