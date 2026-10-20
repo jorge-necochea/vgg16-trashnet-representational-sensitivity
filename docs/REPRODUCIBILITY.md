@@ -45,3 +45,16 @@ No explicit subsampling, optimization, or progressive options were supplied.
 The encoder was Pillow's JPEG writer backed by the JPEG library available in
 the Google Colab runtime. The exact historical Pillow and
 libjpeg/libjpeg-turbo version was not recorded in the notebook.
+
+## Editorial harmonization (20 October 2026)
+
+The active supplement was updated to Tables S1–S13 without recomputing model
+embeddings. The C7 aggregate storage-format CSV was clarified: its 0.9985 pooled
+direct JPG–PNG embedding cosine covers 49,320 matched pairs and 0.9949 is the
+minimum of the 60 condition-by-block **mean** cosines. The C8 R5 effect-size
+variable was renamed from the incorrect `epsilon_squared` to `eta_squared_h`:
+`max(0, (H-k+1)/(n-k))`. These are documentation/naming corrections only.
+
+The full end-to-end pipeline has not been reproduced independently on a clean
+runtime, and neither the published original source JPEG compression settings
+nor the historical JPG encoder versions have been recovered.

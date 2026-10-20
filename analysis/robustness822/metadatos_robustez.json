@@ -1,0 +1,29 @@
+{
+  "modo": "equilibrado822",
+  "images": 822,
+  "rows_per_strategy": 49320,
+  "strategies": [
+    "stretch_original",
+    "letterbox",
+    "no_padding"
+  ],
+  "seed": 2026,
+  "torch": "2.11.0+cu130",
+  "torchvision": "0.26.0+cu130",
+  "PIL": "11.3.0",
+  "python": "3.13.15",
+  "model": "VGG16_Weights.IMAGENET1K_V1",
+  "layers": {
+    "Block1": 3,
+    "Block2": 8,
+    "Block3": 15,
+    "Block4": 22,
+    "Block5": 29
+  },
+  "original_preprocessing": "Resize((224,224)) sin relación de aspecto",
+  "letterbox": "Resize a 224×168 sobre 224×224 con padding RGB cercano a la media ImageNet",
+  "no_padding": "Resize a 224×168, solo model.features",
+  "baseline": "mediana coseno pares originales random por estrategia sobre el mismo conjunto de imágenes",
+  "cka": "linear centered CKA por estrategia / bloque / condición",
+  "limitations": "piloto pequeño no valida resultados poblacionales; controles distintos a preentrenamiento; CKA exploratorio con pocas imágenes"
+}
