@@ -2,8 +2,7 @@
 
 Manuscript: `jimaging-4632369` (*Journal of Imaging*).
 
-This patch is prepared **against the integrated repository snapshot dated 18 October 2026**.
-It is not proof that the live `revision-jimaging-2026` branch has been updated.
+This document records the patch prepared against the 18 October snapshot. Subsequent publication of the patch to the `revision-jimaging-2026` branch and independent verification using a fresh Colab clone **were completed on 20 October 2026**. The validation establishes published-file integrity and key derived-data consistency, not end-to-end notebook re-execution.
 
 ## Changes, no recomputation
 
@@ -13,7 +12,7 @@ It is not proof that the live `revision-jimaging-2026` branch has been updated.
 - Updated README, data dictionary, reproducibility notes, R6 checklist and repository validator.
 - Regenerated `checksums.sha256` for all repository files (manifest excluded).
 
-## Publication protocol
+## Publication protocol (historical steps; completed for the current revision branch)
 
 1. Open the target branch (previously `revision-jimaging-2026`) and **verify its contents match the 18 October integrated snapshot** before copying this patch. If not, use a local clone and merge the small changes selectively; do not delete other work.
 2. Upload each file from the patch preserving directories; replace the pre-existing files, without deleting unrelated files.
