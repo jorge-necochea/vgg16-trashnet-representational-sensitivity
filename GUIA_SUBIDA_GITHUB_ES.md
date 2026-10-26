@@ -1,3 +1,5 @@
+> **Documento histórico (archivado).** Estas instrucciones describen la primera carga de un repositorio vacío. La publicación ya se completó; la rama vigente es `main` y el PR #1 se fusionó el 20 de octubre de 2026. Para reproducibilidad y resultados actuales, consulte [README.md](README.md) y [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
+
 # Guía de subida a GitHub
 
 ## Antes de subir
@@ -22,5 +24,3 @@ de Pillow/libjpeg no fue registrada y se declara como tal.
 Los CSV grandes están comprimidos como `.csv.gz` para respetar los límites de
 la carga web. La compresión es sin pérdida y pandas los abre directamente.
 
-No necesitas conectar GitHub con ChatGPT. Tú conservas el control de la cuenta;
-yo preparo y verifico los archivos y tú haces la subida final desde el navegador.

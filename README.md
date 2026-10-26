@@ -104,7 +104,7 @@ is not covered by these repository licenses.
 - `notebooks/originals/` preserves additional original notebooks for full-set PNG generation, historical statistical analysis (Friedman, Wilcoxon–Holm, Kruskal–Wallis, Mann–Whitney, 822-vs-2527 and storage control), and paired JPG–PNG extraction. These are historical Colab notebooks with environment-specific paths and are **not claimed to have passed clean end-to-end execution from a new checkout**.
 - Run `python scripts/validate_repository.py` for archive integrity, checksum coverage, and numerical consistency of the published files. The validator does not reconstruct model embeddings.
 
-**Known reproduction caveats:** The historical transformation-manifest path prefix `TrashNet_transformations_complete_png` differs from the Google Drive folder `TrashNet_transformaciones_completo_png`; resolve this mapping in the runtime before executing from the manifest. The historical notebook `01_extract_vgg16_metrics_complete_dataset.ipynb` skips already-existing condition CSV files based on row count alone; delete/segregate old outputs for a genuine rerun. Environment versions must be tested on the target clean Colab runtime. Do not infer all manuscript tables and figures are regenerated solely from a passing file-integrity validator. The finalized supplementary document should replace the existing DOCX once editorial review is complete.
+**Known reproduction caveats:** The historical transformation-manifest path prefix `TrashNet_transformations_complete_png` differs from the Google Drive folder `TrashNet_transformaciones_completo_png`; resolve this mapping in the runtime before executing from the manifest. The historical notebook `01_extract_vgg16_metrics_complete_dataset.ipynb` skips already-existing condition CSV files based on row count alone; delete/segregate old outputs for a genuine rerun. Environment versions must be tested on the target clean Colab runtime. Do not infer all manuscript tables and figures are regenerated solely from a passing file-integrity validator. The consolidated S1–S13 supplementary DOCX is now the active published document.
 
 ## Consolidated journal-revision alignment — 20 October 2026
 
@@ -127,5 +127,8 @@ unchanged**. Historical notebooks in `notebooks/originals/` remain unmodified.
 **Validation scope:** `python scripts/validate_repository.py` checks integrity,
 row counts, formulas, data conventions, and the consolidated Word supplement.
 It **does not** demonstrate independent end-to-end rerun of VGG-16 extraction.
-The public release must be checked after uploading this package; a local PASS
-is not proof of successful publication.
+The public repository and the `main` branch were checked following the 20 October
+2026 merge of pull request #1 (commit `f510196`). A fresh Colab clone of `main`
+passed the integrity and selected consistency checks, but **not** a complete
+independent end-to-end rerun of model extraction or analysis notebooks.
+Documentation and checksum references were harmonized on 26 October 2026.

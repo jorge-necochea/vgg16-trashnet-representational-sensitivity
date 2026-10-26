@@ -21,3 +21,9 @@ This document records the patch prepared against the 18 October snapshot. Subseq
 5. Update the manuscript Data Availability URL and editor-response R6 status only after public-branch verification, ideally using a stable release or commit permalink. Do not claim a full end-to-end rerun without doing one.
 
 **This patch does not include trained weights, original TrashNet images or full embedding matrices.**
+
+## Main-branch publication follow-up — 26 October 2026
+
+The historical upload procedure above was completed. Pull request #1 merged the four editorial commits from `revision-jimaging-2026` into the public default branch `main` on 20 October 2026 (merge commit `f510196`). A fresh checkout of `main` passed the repository's integrity and selected derived-data consistency checks on that date. The public repository tree, including the consolidated S1–S13 supplement, was inspected again on 26 October 2026.
+
+This follow-up updates the Data Availability URL, the R6 and resubmission checklists, the README and the historical upload guide; checksums are refreshed. No experimental measurements, embeddings, statistical results, notebooks or figure assets were changed in this documentation-only commit. The full end-to-end computational replay remains unverified.
