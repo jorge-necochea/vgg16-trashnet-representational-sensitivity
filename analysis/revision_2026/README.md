@@ -10,6 +10,7 @@ This directory contains the code, controls, and reported results for the robustn
 | [`analisis_cpu_v3/`](analisis_cpu_v3/) | Current CPU analysis script, [execution instructions](analisis_cpu_v3/INSTRUCCIONES_ANALISIS.md), and tests. |
 | [`analisis_adenda_v3/`](analisis_adenda_v3/) | Current [results](analisis_adenda_v3/19_redaccion_interpretaciones.md) and supporting CSV tables for gamma, rotation, zoom, pre-GAP sparsity, and the pretrained ImageNet head. |
 | [`analisis_cpu_v2/`](analisis_cpu_v2/), [`analisis_adenda_v2/`](analisis_adenda_v2/) | Previous version, kept for traceability. Version 3 applies the documented deviation D2. |
+| E1 zoom CKA | [Analysis script, instructions, and tests](cka_zoom_v1_1.zip) and [output tables, manifest, and checksums](analisis_cka_zoom_v1.zip). |
 
 ### Deviation D2 (2026-11-25)
 
@@ -21,6 +22,10 @@ D2 was recorded after the version 2 results were audited. It changes two seconda
 Version 2 compared both labels with the expected region of the claim. D2 changed the labels of four zoom conditions: Z1 at 1.50× and Z2 at all three levels. These now read "no region discordance" and "stable under class balance"; all 200 balanced samples reproduce their observed peak region.
 
 No computation, verdict, or interpretation decision changed. Sixteen tables are byte-identical between versions 2 and 3; tables 08, 09, 12, and 19 differ as intended. The previous labels remain in columns ending in `_vs_expected_region`.
+
+### Descriptive zoom analysis (E1)
+
+E1 was added after the addendum was frozen. It reports centered linear CKA for the original zoom and all three controls using the audited v3 implementation and the same 2,000 frozen bootstrap resamples. The outputs include blockwise CKA, Block1-minus-Block5 differences, and paired differences between each control and the original zoom.
 
 ## Verify the results
 
@@ -36,7 +41,7 @@ sha256sum -c checksums.sha256
 (cd extraction_control && awk '$2 !~ /^conjuntos\//' H_checksums.sha256 | sha256sum -c -)
 ```
 
-The `gzip` command reconstructs the exact audited bootstrap file from the numbered parts. The last command checks the 12 public extraction records. The complete extraction manifest also records the SHA-256 of the 35 NPZ files under `conjuntos/`. Those files and the original TrashNet images are separate analysis inputs.
+The `gzip` command reconstructs the exact audited bootstrap file from the numbered parts. The last command checks the 12 public extraction records. The complete extraction manifest also records the SHA-256 of the 35 NPZ files under `conjuntos/`. Those files and the original TrashNet images are separate analysis inputs. The top-level checksums also verify both E1 archives. The E1 results archive contains its own checksums for the three tables, the manifest, and the execution log.
 
 ## What GitHub alone verifies and what needs the external files
 
