@@ -1,0 +1,11 @@
+denominator,other_class,r_rb_cardboard_vs_other,p,p_holm
+random,glass,0.240516,4.90247e-10,2.45123e-09
+random,metal,0.202457,5.85643e-07,1.75693e-06
+random,paper,0.0603805,0.105318,0.105318
+random,plastic,0.211649,5.70452e-08,2.28181e-07
+random,trash,0.15093,0.00827656,0.0165531
+same_class,glass,0.326588,2.94033e-17,1.17613e-16
+same_class,metal,0.456128,2.17021e-29,1.0851e-28
+same_class,paper,0.155024,3.2045e-05,3.2045e-05
+same_class,plastic,0.186876,1.64713e-06,4.9414e-06
+same_class,trash,0.251852,1.05078e-05,2.10156e-05

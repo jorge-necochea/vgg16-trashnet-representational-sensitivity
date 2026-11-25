@@ -1,0 +1,276 @@
+{
+  "fingerprint_id": "704a9ee8c967e6cc18b6d2a5a63a48fc82716b239f6b1bd323755827861fb60f",
+  "fingerprint": {
+    "script_sha256": "c103a44e530c7e873b6b3fa4b3f7d54c4a8ba6e46a18e90901f4857de324ec42",
+    "addendum_sha256": "8f0c7b19079c196f2ad6220340b47adb64b7d775c32d974e8d2a6145decda156",
+    "criteria_sha256": "492a06251c6995dd505ab1624eeaa559ca2cdd486eb7a15b8be0f4f093eddf57",
+    "repo": {
+      "commit": "6672c2c7e4b84a5b0381de0d70476a97438223e5",
+      "generate_transformations_png_sha256": "39f2eb0935d7914370bdff5e095c9d99b14b82016e883f8686aecce93788499b",
+      "original_image_index_sha256": "796f11e8cf3307068824bfe868902cff23cdeaf56a68628c1e50f8193b43257f"
+    },
+    "mode": {
+      "smoke_images_per_class": 0,
+      "n_images": 2527,
+      "row_index_sha256": "ea8f0f6653e931f878db165dcaa940151007eab5acb6d115b1ee90383d6506b5"
+    },
+    "inputs": {
+      "jpeg_digest": "73cfe75b6a3e1bf1d19632514006aad5c26944480f9364402003be9e567b5221",
+      "reference_npz_sha256": {
+        "original_uint8": "5a213706a951c7c5f7ab62ba9b765dcfc428fc521890c5e0b3f199e94c260582",
+        "brightness_low": "296e2c349f506d25d1b7afa65f4c238968dbb5de9d501b7ec8f2715c3335e5dc",
+        "brightness_medium": "f8e7ebb8d1ee03bf449d898969fed9451e820851ee22c781faad7959465776c6",
+        "brightness_high": "45fb4d18b982d73804c9d0c9cbd65eac47f0742f3d9e827a7ef80a64fae369df",
+        "contrast_low": "ab80c2290403d8992ca57a402f969839c66e02dfadb0c315b0f27f2cd6dc7999",
+        "contrast_medium": "93263be10fd262288222f66a02484270b7b1fb3ca79e9affff685b8e3458a45d",
+        "contrast_high": "1495621ca78c104d791b43d235b2d17ca1870a60d688240af86a0bd7752f7e72",
+        "rotation_low": "6a9a1e502d1913d50994045d1a2e338e14c1983c8a22cbf170d5b19029814bbc",
+        "rotation_medium": "534d20a5efac3d4eb59b6ab07600b7da2d74bba88a6111f77f8a18868abbea2b",
+        "rotation_high": "197e72daf81ff51e29edd85de96f45d3e37a58eb20504275e5510f70a9d2b942",
+        "zoom_low": "95b11fa6a4ca38bc829d37744d31cc36db2c10cb68b26f56f7ca60c7482caac1",
+        "zoom_medium": "452c4f1c463b2223d3dbc59744c17bde46f4cc116be7d7b57353e6f5b95e41fb",
+        "zoom_high": "ad3ba32d9b54271bcf0db44a2aa495363554a045308ce4e6c8ff04c9c7df2324"
+      },
+      "png_root": "/content/gdrive/MyDrive/2026-0/TrashNet_transformaciones_completo_png"
+    },
+    "weights": {
+      "file": "vgg16-397923af.pth",
+      "sha256": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0"
+    },
+    "parameters": {
+      "existing": {
+        "brightness": {
+          "low": 1.2,
+          "medium": 1.4,
+          "high": 1.6
+        },
+        "contrast": {
+          "low": 1.2,
+          "medium": 1.4,
+          "high": 1.6
+        },
+        "rotation": {
+          "low": 10,
+          "medium": 30,
+          "high": 60
+        },
+        "zoom": {
+          "low": 1.1,
+          "medium": 1.25,
+          "high": 1.5
+        }
+      },
+      "fill_rgb": [
+        124,
+        116,
+        104
+      ],
+      "pad_r1": 256,
+      "near_zero_bins": [
+        4096,
+        -6.0,
+        4.0
+      ],
+      "luma": [
+        0.299,
+        0.587,
+        0.114
+      ],
+      "gamma_bracket": [
+        0.05,
+        1.0
+      ],
+      "gamma_tol": 1e-05,
+      "gate_tolerances": [
+        1e-06,
+        1e-05,
+        1e-05
+      ],
+      "seed": 2026,
+      "batch": 32,
+      "hist_batch": 16,
+      "aux_fields": {
+        "R2": [
+          "r2_mae_R",
+          "r2_mae_G",
+          "r2_mae_B",
+          "r2_max_abs_diff",
+          "r2_pct_pixels_different"
+        ],
+        "gamma": [
+          "gamma_Y_mean_original",
+          "gamma_Y_mean_transformed",
+          "gamma_Y_std_original",
+          "gamma_Y_std_transformed",
+          "gamma_newly_saturated_pixel_fraction",
+          "gamma_newly_saturated_component_fraction"
+        ]
+      }
+    },
+    "environment": {
+      "python": "3.13.16",
+      "numpy": "2.4.6",
+      "pandas": "2.2.3",
+      "Pillow": "11.3.0",
+      "torch": "2.14.1+cu130",
+      "torchvision": "0.29.1+cu130",
+      "cuda": "13.0",
+      "cudnn": 92800,
+      "gpu": "Tesla T4",
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "allow_tf32_matmul": false,
+      "allow_tf32_cudnn": false
+    }
+  },
+  "smoke_test_images_per_class": 0,
+  "valid_for_analysis": true,
+  "embedding_gate_passed": true,
+  "pixel_gate": {
+    "mode": "completo",
+    "n_compared": 30324,
+    "passed": true
+  },
+  "gammas": {
+    "low": 0.5804901123046877,
+    "medium": 0.37244567871093753,
+    "high": 0.26430664062500003
+  },
+  "thresholds_digest": "57ca8cf39584432026fe19a4802f13fc57dd12467b68381e8727e7db7f2a289d",
+  "post_summaries": {
+    "B_float": {
+      "Block1": 0.8435511891191936,
+      "Block2": 0.8686442596184056,
+      "Block3": 0.7886838470219363,
+      "Block4": 0.6413663513723852,
+      "Block5": 0.4076315416218357
+    },
+    "R2_equivalent_to_R0": true
+  },
+  "timings_s": {
+    "original_uint8": 19.1,
+    "brightness_low": 21.7,
+    "brightness_medium": 21.8,
+    "brightness_high": 21.9,
+    "contrast_low": 23.6,
+    "contrast_medium": 24.1,
+    "contrast_high": 22.8,
+    "rotation_low": 32.9,
+    "rotation_medium": 32.1,
+    "rotation_high": 31.2,
+    "zoom_low": 24.2,
+    "zoom_medium": 24.4,
+    "zoom_high": 24.3,
+    "original_float": 22.1,
+    "gamma_low": 84.1,
+    "gamma_medium": 86.9,
+    "gamma_high": 83.1,
+    "rotR1_low": 110.7,
+    "rotR1_medium": 106.1,
+    "rotR1_high": 111.0,
+    "rotR2_low": 100.8,
+    "rotR2_medium": 109.8,
+    "rotR2_high": 111.0,
+    "rotR3_low": 36.9,
+    "rotR3_medium": 39.4,
+    "rotR3_high": 42.2,
+    "zoomZ1_low": 20.5,
+    "zoomZ1_medium": 20.4,
+    "zoomZ1_high": 19.7,
+    "zoomZ1r_low": 21.7,
+    "zoomZ1r_medium": 21.2,
+    "zoomZ1r_high": 21.6,
+    "zoomZ2_low": 31.7,
+    "zoomZ2_medium": 29.9,
+    "zoomZ2_high": 28.7
+  },
+  "weights_path": "/root/.cache/torch/hub/checkpoints/vgg16-397923af.pth",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "operators": {
+    "zoom_box": "cw=int(512/z), ch=int(384/z), left=(512-cw)//2, top=(384-ch)//2",
+    "Z1_fill_rgb": [
+      124,
+      116,
+      104
+    ],
+    "R1_pad": 256,
+    "near_zero_bins": [
+      4096,
+      -6.0,
+      4.0
+    ]
+  },
+  "sets": [
+    "original_uint8",
+    "brightness_low",
+    "brightness_medium",
+    "brightness_high",
+    "contrast_low",
+    "contrast_medium",
+    "contrast_high",
+    "rotation_low",
+    "rotation_medium",
+    "rotation_high",
+    "zoom_low",
+    "zoom_medium",
+    "zoom_high",
+    "original_float",
+    "gamma_low",
+    "gamma_medium",
+    "gamma_high",
+    "rotR1_low",
+    "rotR1_medium",
+    "rotR1_high",
+    "rotR2_low",
+    "rotR2_medium",
+    "rotR2_high",
+    "rotR3_low",
+    "rotR3_medium",
+    "rotR3_high",
+    "zoomZ1_low",
+    "zoomZ1_medium",
+    "zoomZ1_high",
+    "zoomZ1r_low",
+    "zoomZ1r_medium",
+    "zoomZ1r_high",
+    "zoomZ2_low",
+    "zoomZ2_medium",
+    "zoomZ2_high"
+  ],
+  "npz_schema": {
+    "set_name": "str: nombre del conjunto de extracción",
+    "fingerprint_id": "str: huella de ejecución con la que se generó (debe coincidir para reutilizarlo)",
+    "thresholds_digest": "str: SHA-256 de los umbrales de casi cero y la máscara de canales vivos usados",
+    "gamma": "float64 escalar: γ aplicado (NaN si el conjunto no es de gamma)",
+    "row_index": "int64 (n,): fila en data/manifests/original_image_index.csv (n = 2527 en la ejecución completa)",
+    "gap_BlockK": "float32 (n, C): GAP de la salida ReLU del bloque K",
+    "czero_BlockK": "float32 (n, C): c_k, fracción de posiciones espaciales exactamente cero del canal k",
+    "s_exact_BlockK": "float32 (n,): s, fracción de activaciones exactamente cero en el tensor C × H × W",
+    "s_near_BlockK": "float32 (n,): fracción de activaciones ≤ umbral de casi cero de su canal (1 % de la mediana de no nulas en los originales), sobre los canales vivos; los ceros exactos cuentan",
+    "logits": "float32 (n, 1000): salida completa de model(x)",
+    "r2_mae_R / r2_mae_G / r2_mae_B": "float32 (n,), solo R2: MAE por componente RGB frente a R0, escala 0–255",
+    "r2_max_abs_diff": "float32 (n,), solo R2: diferencia absoluta máxima frente a R0, escala 0–255",
+    "r2_pct_pixels_different": "float32 (n,), solo R2: % de píxeles con algún componente distinto de R0",
+    "gamma_Y_mean_original / gamma_Y_mean_transformed": "float32 (n,), solo gamma: luminancia media BT.601 en [0, 1]",
+    "gamma_Y_std_original / gamma_Y_std_transformed": "float32 (n,), solo gamma: desviación estándar de Y",
+    "gamma_newly_saturated_pixel_fraction": "float32 (n,), solo gamma: fracción de píxeles con algún componente que llega a 1 sin valer 1 antes (debe ser 0)",
+    "gamma_newly_saturated_component_fraction": "float32 (n,), solo gamma: lo mismo por componente RGB (debe ser 0)"
+  },
+  "aux_fields_by_set_kind": {
+    "R2": [
+      "r2_mae_R",
+      "r2_mae_G",
+      "r2_mae_B",
+      "r2_max_abs_diff",
+      "r2_pct_pixels_different"
+    ],
+    "gamma": [
+      "gamma_Y_mean_original",
+      "gamma_Y_mean_transformed",
+      "gamma_Y_std_original",
+      "gamma_Y_std_transformed",
+      "gamma_newly_saturated_pixel_fraction",
+      "gamma_newly_saturated_component_fraction"
+    ]
+  }
+}

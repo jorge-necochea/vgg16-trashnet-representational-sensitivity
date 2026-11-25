@@ -1,0 +1,27 @@
+{
+  "low": {
+    "angle": 10,
+    "R1_pixels_touched_by_fill0": 0,
+    "R1_fraction_from_reflection_any": 0.079254150390625,
+    "R1_fraction_from_reflection_full": 0.07500203450520833,
+    "R0_fraction_fill_any": 0.07712809244791667,
+    "R0_fraction_fill_full": 0.07712809244791667
+  },
+  "medium": {
+    "angle": 30,
+    "R1_pixels_touched_by_fill0": 0,
+    "R1_fraction_from_reflection_any": 0.169525146484375,
+    "R1_fraction_from_reflection_full": 0.165679931640625,
+    "R0_fraction_fill_any": 0.16759236653645834,
+    "R0_fraction_fill_full": 0.16759236653645834
+  },
+  "high": {
+    "angle": 60,
+    "R1_pixels_touched_by_fill0": 0,
+    "R1_fraction_from_reflection_any": 0.204742431640625,
+    "R1_fraction_from_reflection_full": 0.20090738932291666,
+    "R0_fraction_fill_any": 0.20281982421875,
+    "R0_fraction_fill_full": 0.20281982421875
+  },
+  "note": "La geometría es la misma para todas las imágenes porque todas miden 512 × 384 (comprobado en la etapa A); por eso la máscara se verifica una vez por ángulo."
+}

@@ -1,0 +1,24 @@
+[     0.0 s] Criterios v1.3, SHA-256 492a06251c6995dd505ab1624eeaa559ca2cdd486eb7a15b8be0f4f093eddf57
+[     0.0 s] Réplicas bootstrap = 2000; extracciones balanceadas = 200; modo rápido = False
+[     1.8 s] Embeddings cargados: 13 archivos, n = 2527
+[     3.1 s] Pares aleatorios de referencia reproducidos exactamente (5 bloques).
+[     5.4 s] F1 frente a A_adj publicado: error absoluto máximo = 3.42e-06
+[    16.3 s] F4 bloque 1 frente a F1 (debe ser ~0): 1.32e-08
+[    18.9 s] Familias F1–F4 y variante de sparsity calculadas.
+[    19.1 s] Índices bootstrap generados y guardados.
+[    42.0 s] Regiones pico y estabilidad bootstrap calculadas.
+[    45.8 s] Friedman (12) y contrastes de referencia (48) calculados.
+[    54.7 s] Sensibilidad con B(b) re-estimado completada.
+[    74.1 s] CKA bootstrap: Block1 listo.
+[    92.8 s] CKA bootstrap: Block2 listo.
+[   112.2 s] CKA bootstrap: Block3 listo.
+[   132.2 s] CKA bootstrap: Block4 listo.
+[   152.4 s] CKA bootstrap: Block5 listo.
+[   152.4 s] CKA frente a la tabla publicada: error absoluto máximo = 4.96e-11
+[   159.5 s] Sensibilidad a la composición de clases completada.
+[   159.6 s] Veredictos calculados.
+[   163.5 s] Análisis por clase completados.
+[   163.7 s] K3 y control de calidad de máscaras completados.
+[   203.8 s] Sparsity completada.
+[   203.9 s] Clipping completado.
+[   204.1 s] Ejecución terminada. A continuación se calculan los checksums de salida (A1).

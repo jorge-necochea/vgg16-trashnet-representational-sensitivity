@@ -1,0 +1,81 @@
+{
+  "mode": "completo",
+  "n_compared": 30324,
+  "passed": true,
+  "by_condition": [
+    {
+      "transformation": "brightness",
+      "level": "high",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "brightness",
+      "level": "low",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "brightness",
+      "level": "medium",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "contrast",
+      "level": "high",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "contrast",
+      "level": "low",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "contrast",
+      "level": "medium",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "rotation",
+      "level": "high",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "rotation",
+      "level": "low",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "rotation",
+      "level": "medium",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "zoom",
+      "level": "high",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "zoom",
+      "level": "low",
+      "size": 2527,
+      "max": 0
+    },
+    {
+      "transformation": "zoom",
+      "level": "medium",
+      "size": 2527,
+      "max": 0
+    }
+  ],
+  "failures": [],
+  "fingerprint_id": "704a9ee8c967e6cc18b6d2a5a63a48fc82716b239f6b1bd323755827861fb60f"
+}

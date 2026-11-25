@@ -1,0 +1,7 @@
+claim,transformation,verdict,by_level,plateau_any,sparsity_sensitive_any,class_balance_sensitive_any
+C1,brightness,Robusta,low: Robusta; medium: Robusta; high: Robusta,True,False,False
+C2,contrast,Robusta,low: Robusta; medium: Robusta; high: Robusta,False,False,False
+C3,rotation,Parcialmente robusta,"low: Región estable, efecto no relevante; medium: Robusta; high: Robusta",True,False,False
+C5,zoom,Parcialmente robusta,low: Robusta; medium: Parcialmente robusta; high: Parcialmente robusta,False,False,False
+C4,rotation (CKA),Sostenida (criterio CKA),low: cumple; medium: cumple; high: cumple,,,
+C6,(C1 o C2) y C5,Sostenida,C1=Robusta; C2=Robusta; C5=Parcialmente robusta,,,

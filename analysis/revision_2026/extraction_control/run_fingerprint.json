@@ -1,0 +1,126 @@
+{
+  "fingerprint_id": "704a9ee8c967e6cc18b6d2a5a63a48fc82716b239f6b1bd323755827861fb60f",
+  "fingerprint": {
+    "script_sha256": "c103a44e530c7e873b6b3fa4b3f7d54c4a8ba6e46a18e90901f4857de324ec42",
+    "addendum_sha256": "8f0c7b19079c196f2ad6220340b47adb64b7d775c32d974e8d2a6145decda156",
+    "criteria_sha256": "492a06251c6995dd505ab1624eeaa559ca2cdd486eb7a15b8be0f4f093eddf57",
+    "repo": {
+      "commit": "6672c2c7e4b84a5b0381de0d70476a97438223e5",
+      "generate_transformations_png_sha256": "39f2eb0935d7914370bdff5e095c9d99b14b82016e883f8686aecce93788499b",
+      "original_image_index_sha256": "796f11e8cf3307068824bfe868902cff23cdeaf56a68628c1e50f8193b43257f"
+    },
+    "mode": {
+      "smoke_images_per_class": 0,
+      "n_images": 2527,
+      "row_index_sha256": "ea8f0f6653e931f878db165dcaa940151007eab5acb6d115b1ee90383d6506b5"
+    },
+    "inputs": {
+      "jpeg_digest": "73cfe75b6a3e1bf1d19632514006aad5c26944480f9364402003be9e567b5221",
+      "reference_npz_sha256": {
+        "original_uint8": "5a213706a951c7c5f7ab62ba9b765dcfc428fc521890c5e0b3f199e94c260582",
+        "brightness_low": "296e2c349f506d25d1b7afa65f4c238968dbb5de9d501b7ec8f2715c3335e5dc",
+        "brightness_medium": "f8e7ebb8d1ee03bf449d898969fed9451e820851ee22c781faad7959465776c6",
+        "brightness_high": "45fb4d18b982d73804c9d0c9cbd65eac47f0742f3d9e827a7ef80a64fae369df",
+        "contrast_low": "ab80c2290403d8992ca57a402f969839c66e02dfadb0c315b0f27f2cd6dc7999",
+        "contrast_medium": "93263be10fd262288222f66a02484270b7b1fb3ca79e9affff685b8e3458a45d",
+        "contrast_high": "1495621ca78c104d791b43d235b2d17ca1870a60d688240af86a0bd7752f7e72",
+        "rotation_low": "6a9a1e502d1913d50994045d1a2e338e14c1983c8a22cbf170d5b19029814bbc",
+        "rotation_medium": "534d20a5efac3d4eb59b6ab07600b7da2d74bba88a6111f77f8a18868abbea2b",
+        "rotation_high": "197e72daf81ff51e29edd85de96f45d3e37a58eb20504275e5510f70a9d2b942",
+        "zoom_low": "95b11fa6a4ca38bc829d37744d31cc36db2c10cb68b26f56f7ca60c7482caac1",
+        "zoom_medium": "452c4f1c463b2223d3dbc59744c17bde46f4cc116be7d7b57353e6f5b95e41fb",
+        "zoom_high": "ad3ba32d9b54271bcf0db44a2aa495363554a045308ce4e6c8ff04c9c7df2324"
+      },
+      "png_root": "/content/gdrive/MyDrive/2026-0/TrashNet_transformaciones_completo_png"
+    },
+    "weights": {
+      "file": "vgg16-397923af.pth",
+      "sha256": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0"
+    },
+    "parameters": {
+      "existing": {
+        "brightness": {
+          "low": 1.2,
+          "medium": 1.4,
+          "high": 1.6
+        },
+        "contrast": {
+          "low": 1.2,
+          "medium": 1.4,
+          "high": 1.6
+        },
+        "rotation": {
+          "low": 10,
+          "medium": 30,
+          "high": 60
+        },
+        "zoom": {
+          "low": 1.1,
+          "medium": 1.25,
+          "high": 1.5
+        }
+      },
+      "fill_rgb": [
+        124,
+        116,
+        104
+      ],
+      "pad_r1": 256,
+      "near_zero_bins": [
+        4096,
+        -6.0,
+        4.0
+      ],
+      "luma": [
+        0.299,
+        0.587,
+        0.114
+      ],
+      "gamma_bracket": [
+        0.05,
+        1.0
+      ],
+      "gamma_tol": 1e-05,
+      "gate_tolerances": [
+        1e-06,
+        1e-05,
+        1e-05
+      ],
+      "seed": 2026,
+      "batch": 32,
+      "hist_batch": 16,
+      "aux_fields": {
+        "R2": [
+          "r2_mae_R",
+          "r2_mae_G",
+          "r2_mae_B",
+          "r2_max_abs_diff",
+          "r2_pct_pixels_different"
+        ],
+        "gamma": [
+          "gamma_Y_mean_original",
+          "gamma_Y_mean_transformed",
+          "gamma_Y_std_original",
+          "gamma_Y_std_transformed",
+          "gamma_newly_saturated_pixel_fraction",
+          "gamma_newly_saturated_component_fraction"
+        ]
+      }
+    },
+    "environment": {
+      "python": "3.13.16",
+      "numpy": "2.4.6",
+      "pandas": "2.2.3",
+      "Pillow": "11.3.0",
+      "torch": "2.14.1+cu130",
+      "torchvision": "0.29.1+cu130",
+      "cuda": "13.0",
+      "cudnn": 92800,
+      "gpu": "Tesla T4",
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "allow_tf32_matmul": false,
+      "allow_tf32_cudnn": false
+    }
+  }
+}

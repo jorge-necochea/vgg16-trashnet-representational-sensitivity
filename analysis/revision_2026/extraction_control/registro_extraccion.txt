@@ -1,0 +1,52 @@
+[     0.0 s] Script extract_colab_v2.py, SHA-256 c103a44e530c7e873b6b3fa4b3f7d54c4a8ba6e46a18e90901f4857de324ec42
+[     0.0 s] Adenda 1 v1.2 SHA-256 8f0c7b19079c196f2ad6220340b47adb64b7d775c32d974e8d2a6145decda156; criterios v1.3 SHA-256 492a06251c6995dd505ab1624eeaa559ca2cdd486eb7a15b8be0f4f093eddf57
+[     0.0 s] 0: repositorio en el commit 6672c2c7e4b84a5b0381de0d70476a97438223e5; generate_transformations_png.py y el índice verificados.
+[     8.8 s] Ejecución nueva: huella 704a9ee8c967e6cc18b6d2a5a63a48fc82716b239f6b1bd323755827861fb60f. GPU: Tesla T4.
+[     8.8 s] A: 2527 JPEG con SHA-256 registrados; todos miden 512 × 384.
+[  1618.9 s] B: control de píxeles (completo): 30324 comparaciones, diferencia máxima global = 0.
+[  1619.0 s] C: R1 sin píxeles de fill=0 en los tres ángulos; proporciones de reflexión y de relleno de R0 registradas.
+[  1664.3 s] D: gamma low: objetivo ΔY = 0.115899, γ = 0.580490
+[  1664.3 s] D: gamma medium: objetivo ΔY = 0.187815, γ = 0.372446
+[  1664.3 s] D: gamma high: objetivo ΔY = 0.230258, γ = 0.264307
+[  1692.9 s] E: primera pasada (histogramas de activaciones no nulas de los originales) completada.
+[  1694.0 s] E: canales vivos por bloque: Block1 64/64, Block2 128/128, Block3 256/256, Block4 512/512, Block5 512/512.
+[  1694.0 s] F: extracción de originales (uint8) y de las 12 condiciones existentes.
+[  1713.1 s]    original_uint8: extraído en 19.1 s.
+[  1734.8 s]    brightness_low: extraído en 21.7 s.
+[  1756.6 s]    brightness_medium: extraído en 21.8 s.
+[  1778.5 s]    brightness_high: extraído en 21.9 s.
+[  1802.0 s]    contrast_low: extraído en 23.6 s.
+[  1826.2 s]    contrast_medium: extraído en 24.1 s.
+[  1848.9 s]    contrast_high: extraído en 22.8 s.
+[  1881.8 s]    rotation_low: extraído en 32.9 s.
+[  1914.0 s]    rotation_medium: extraído en 32.1 s.
+[  1945.2 s]    rotation_high: extraído en 31.2 s.
+[  1969.4 s]    zoom_low: extraído en 24.2 s.
+[  1993.7 s]    zoom_medium: extraído en 24.4 s.
+[  2018.0 s]    zoom_high: extraído en 24.3 s.
+[  2026.3 s] F: control de embeddings APROBADO: coseno mínimo 1.000000000; norma relativa máx. 2.38e-06; A_adj máx. 1.85e-06.
+[  2026.3 s] G: extracción de los 22 conjuntos restantes.
+[  2048.3 s]    original_float: extraído en 22.1 s.
+[  2132.4 s]    gamma_low: extraído en 84.1 s.
+[  2219.3 s]    gamma_medium: extraído en 86.9 s.
+[  2302.4 s]    gamma_high: extraído en 83.1 s.
+[  2413.0 s]    rotR1_low: extraído en 110.7 s.
+[  2519.2 s]    rotR1_medium: extraído en 106.1 s.
+[  2630.2 s]    rotR1_high: extraído en 111.0 s.
+[  2731.0 s]    rotR2_low: extraído en 100.8 s.
+[  2840.8 s]    rotR2_medium: extraído en 109.8 s.
+[  2951.8 s]    rotR2_high: extraído en 111.0 s.
+[  2988.7 s]    rotR3_low: extraído en 36.9 s.
+[  3028.1 s]    rotR3_medium: extraído en 39.4 s.
+[  3070.3 s]    rotR3_high: extraído en 42.2 s.
+[  3090.8 s]    zoomZ1_low: extraído en 20.5 s.
+[  3111.2 s]    zoomZ1_medium: extraído en 20.4 s.
+[  3130.9 s]    zoomZ1_high: extraído en 19.7 s.
+[  3152.5 s]    zoomZ1r_low: extraído en 21.7 s.
+[  3173.7 s]    zoomZ1r_medium: extraído en 21.2 s.
+[  3195.3 s]    zoomZ1r_high: extraído en 21.6 s.
+[  3227.0 s]    zoomZ2_low: extraído en 31.7 s.
+[  3256.9 s]    zoomZ2_medium: extraído en 29.9 s.
+[  3285.6 s]    zoomZ2_high: extraído en 28.7 s.
+[  3292.3 s] G: B_float = 0.8436, 0.8686, 0.7887, 0.6414, 0.4076; R2 operacionalmente equivalente a R0: True.
+[  3292.3 s] H: registro cerrado. A continuación se calculan los checksums de salida.

@@ -1,0 +1,4 @@
+variant,level,angle,D_R0,D_R1,D_ci_low,D_ci_high,threshold_ok,monotone_nonincreasing_point,q,q_ci_low,q_ci_high,n_boot_valid,n_boot
+R1,low,10,0.0614676,0.0413301,0.0386088,0.0431875,True,True,0.672389,0.654082,0.690991,2000,2000
+R1,medium,30,0.129275,0.111334,0.104347,0.116502,True,False,0.861217,0.839338,0.884641,2000,2000
+R1,high,60,0.153985,0.142379,0.133622,0.148721,True,True,0.924631,0.901789,0.951279,2000,2000

@@ -1,0 +1,93 @@
+{
+  "criteria_version": "1.3",
+  "criteria_docx_sha256": "492a06251c6995dd505ab1624eeaa559ca2cdd486eb7a15b8be0f4f093eddf57",
+  "script": "run_robustness_v2.py",
+  "script_sha256": "fddf94623f46c0caf359999a724ca47545e7d368c2cf49d23dd4ec20e611d7cf",
+  "quick_mode": false,
+  "n_boot": 2000,
+  "n_draws": 200,
+  "seeds": {
+    "bootstrap": 2026,
+    "balanced_draws": 2026,
+    "pair_sampling_B_reestimation": [
+      2026,
+      1
+    ],
+    "reference_pairs": 2026,
+    "F4_projection": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032,
+      2033,
+      2034,
+      2035,
+      2036,
+      2037,
+      2038,
+      2039,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2045
+    ]
+  },
+  "environment": {
+    "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+    "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1"
+  },
+  "inputs_sha256": {
+    "embeddings_originales_VGG16_R1.npz": "5a213706a951c7c5f7ab62ba9b765dcfc428fc521890c5e0b3f199e94c260582",
+    "transformadas/embeddings_brightness_high.npz": "45fb4d18b982d73804c9d0c9cbd65eac47f0742f3d9e827a7ef80a64fae369df",
+    "transformadas/embeddings_brightness_low.npz": "296e2c349f506d25d1b7afa65f4c238968dbb5de9d501b7ec8f2715c3335e5dc",
+    "transformadas/embeddings_brightness_medium.npz": "f8e7ebb8d1ee03bf449d898969fed9451e820851ee22c781faad7959465776c6",
+    "transformadas/embeddings_contrast_high.npz": "1495621ca78c104d791b43d235b2d17ca1870a60d688240af86a0bd7752f7e72",
+    "transformadas/embeddings_contrast_low.npz": "ab80c2290403d8992ca57a402f969839c66e02dfadb0c315b0f27f2cd6dc7999",
+    "transformadas/embeddings_contrast_medium.npz": "93263be10fd262288222f66a02484270b7b1fb3ca79e9affff685b8e3458a45d",
+    "transformadas/embeddings_rotation_high.npz": "197e72daf81ff51e29edd85de96f45d3e37a58eb20504275e5510f70a9d2b942",
+    "transformadas/embeddings_rotation_low.npz": "6a9a1e502d1913d50994045d1a2e338e14c1983c8a22cbf170d5b19029814bbc",
+    "transformadas/embeddings_rotation_medium.npz": "534d20a5efac3d4eb59b6ab07600b7da2d74bba88a6111f77f8a18868abbea2b",
+    "transformadas/embeddings_zoom_high.npz": "ad3ba32d9b54271bcf0db44a2aa495363554a045308ce4e6c8ff04c9c7df2324",
+    "transformadas/embeddings_zoom_low.npz": "95b11fa6a4ca38bc829d37744d31cc36db2c10cb68b26f56f7ca60c7482caac1",
+    "transformadas/embeddings_zoom_medium.npz": "452c4f1c463b2223d3dbc59744c17bde46f4cc116be7d7b57353e6f5b95e41fb",
+    "data/manifests/original_image_index.csv": "796f11e8cf3307068824bfe868902cff23cdeaf56a68628c1e50f8193b43257f",
+    "data/derived_metrics/r1/baseline_pair_similarity_samples.npz": "084dd90e2089a62e8c35c1b484c1c137d4426b657e5aaaa112061fee23b2f482",
+    "data/derived_metrics/r1/image_level_adjusted_sensitivity.csv.gz": "a2f5c96692455c0891b1faaf9706c3346b32bacafab25bdfa377885cd66fb9ad",
+    "data/summary_tables/r1/05_CKA_lineal_centrado_por_condicion.csv": "819619d07936fc18e2e4fe80db2881fbcf2ac49ccf6a4ddd507c1ac1e7bfe367",
+    "data/derived_metrics/r3/01_brightness_clipping_by_image.csv": "27eb81540103d9b0278cff88dd8d229fc5db6bf44c25e972d2b37a750b82b07d",
+    "data/derived_metrics/r5/01_object_extent_by_image.csv": "cd19da4807015cdb6bb5124020d624e272ab9c806fb5f0fc6c5ab6574ea2f8d8",
+    "data/derived_metrics/r5/02_peripheral_gradient_by_image_and_zoom.csv": "893644e1971b7d5e13184bde03385ea562cec5ac0f5ce3ae9c25ff025c44b3f9"
+  },
+  "checks": {
+    "F1_vs_published_A_adj_max_abs_err": 3.4224694041018466e-06,
+    "F4_block1_vs_F1_max_abs_err": 1.3182028357761055e-08,
+    "CKA_vs_published_max_abs_err": 4.9573900540167415e-11,
+    "K1_holds": true,
+    "B_first137_recomputed": [
+      0.847114581420801,
+      0.869806035703899,
+      0.7894394519583895,
+      0.6339662486309137,
+      0.3972140802259151
+    ]
+  },
+  "interpretations_and_deviations": [
+    "D1 (clipping): un ajuste por residuos centrados en la media no puede cambiar la media por bloque; se informa la versión literal (idéntica por construcción) y, como complemento descriptivo no preespecificado, perfiles por tercil de clipping.",
+    "I1: \"diferencia pareada\" en los criterios de dirección se implementa como la mediana de las diferencias por imagen, igual que en la regla de tamaño de efecto.",
+    "I2: estabilidad y región de F2–F4 se juzgan respecto de la región informada en el manuscrito enviado."
+  ],
+  "audit_adjustments_v2": [
+    "A1: los checksums de salida se calculan después de cerrar el registro de ejecución.",
+    "A2 (no preespecificado, de auditoría): la tabla 21 incluye n_boot_valid; las réplicas sin varianza en |z_t − z_0| se excluyen explícitamente; una asociación es no informativa si ≥ 90 % de las imágenes tienen |z_t − z_0| = 0 o si hay < 95 % de réplicas válidas.",
+    "A3: la tabla 17 incluye el número de imágenes retenidas por clase en cada subconjunto de K3.",
+    "Decisión sobre K3 (auditoría): se retira del resumen y de las conclusiones; en resultados se informa como exploratorio e inconcluso porque no se mantiene al excluir máscaras problemáticas."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "luma_weights": [
+    0.299,
+    0.587,
+    0.114
+  ],
+  "bracket": [
+    0.05,
+    1.0
+  ],
+  "tolerance_delta_Y": 1e-05,
+  "levels": {
+    "low": {
+      "brightness_factor": 1.2,
+      "target_delta_Y": 0.11589887907855993,
+      "gamma": 0.5804901123046877,
+      "achieved_delta_Y_global": 0.11589622619110723,
+      "brightness_delta_Y_per_image_median": 0.11885442931730006,
+      "brightness_delta_Y_per_image_iqr": [
+        0.1063106194789113,
+        0.1292580008513008
+      ],
+      "gamma_delta_Y_per_image_median": 0.11388705201227213,
+      "gamma_delta_Y_per_image_iqr": [
+        0.10382756989170888,
+        0.1275543113625366
+      ],
+      "gamma_newly_saturated_component_fraction": 0.0
+    },
+    "medium": {
+      "brightness_factor": 1.4,
+      "target_delta_Y": 0.18781524628398377,
+      "gamma": 0.37244567871093753,
+      "achieved_delta_Y_global": 0.1878061554076832,
+      "brightness_delta_Y_per_image_median": 0.19207131357629303,
+      "brightness_delta_Y_per_image_iqr": [
+        0.16763847768945628,
+        0.2108563117432437
+      ],
+      "gamma_delta_Y_per_image_median": 0.18306037661410243,
+      "gamma_delta_Y_per_image_iqr": [
+        0.16653218778677928,
+        0.20846513001780204
+      ],
+      "gamma_newly_saturated_component_fraction": 0.0
+    },
+    "high": {
+      "brightness_factor": 1.6,
+      "target_delta_Y": 0.23025844502242337,
+      "gamma": 0.26430664062500003,
+      "achieved_delta_Y_global": 0.23026526618842663,
+      "brightness_delta_Y_per_image_median": 0.23232885117873636,
+      "brightness_delta_Y_per_image_iqr": [
+        0.2009241542043249,
+        0.26180505113788677
+      ],
+      "gamma_delta_Y_per_image_median": 0.2234656422962548,
+      "gamma_delta_Y_per_image_iqr": [
+        0.20303914037211893,
+        0.2556760543661152
+      ],
+      "gamma_newly_saturated_component_fraction": 0.0
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "addendum_sha256": "8f0c7b19079c196f2ad6220340b47adb64b7d775c32d974e8d2a6145decda156",
+  "criteria_sha256": "492a06251c6995dd505ab1624eeaa559ca2cdd486eb7a15b8be0f4f093eddf57",
+  "script": "analyze_adenda_v2.py",
+  "script_sha256": "21d7f8664994d1e509b292c0b2bc3f39400688448a234ad6eb060ef7e6c53cbc",
+  "test_fixture": false,
+  "valid_for_manuscript": true,
+  "extraction_fingerprint_id": "704a9ee8c967e6cc18b6d2a5a63a48fc82716b239f6b1bd323755827861fb60f",
+  "identity_checks": {
+    "script de extracción v2": true,
+    "adenda v1.2": true,
+    "criterios v1.3": true,
+    "commit del repositorio": true,
+    "ejecución completa (sin --smoke)": true,
+    "2527 imágenes": true
+  },
+  "n_boot": 2000,
+  "n_balanced_draws": 200,
+  "per_class_draw": 137,
+  "B_manuscript": {
+    "Block1": 0.844512552022934,
+    "Block2": 0.8700534701347351,
+    "Block3": 0.7909451723098755,
+    "Block4": 0.643393874168396,
+    "Block5": 0.4083487242460251
+  },
+  "B_float": {
+    "Block1": 0.8435511891191936,
+    "Block2": 0.8686442596184056,
+    "Block3": 0.7886838470219363,
+    "Block4": 0.6413663513723852,
+    "Block5": 0.4076315416218357
+  },
+  "gammas": {
+    "low": 0.5804901123046877,
+    "medium": 0.37244567871093753,
+    "high": 0.26430664062500003
+  },
+  "R2_equivalent_to_R0": true,
+  "gamma_newly_saturated": {
+    "low": {
+      "pixel_mean": 0.0,
+      "pixel_max": 0.0,
+      "component_mean": 0.0,
+      "component_max": 0.0,
+      "component_global_from_histogram": 0.0
+    },
+    "medium": {
+      "pixel_mean": 0.0,
+      "pixel_max": 0.0,
+      "component_mean": 0.0,
+      "component_max": 0.0,
+      "component_global_from_histogram": 0.0
+    },
+    "high": {
+      "pixel_mean": 0.0,
+      "pixel_max": 0.0,
+      "component_mean": 0.0,
+      "component_max": 0.0,
+      "component_global_from_histogram": 0.0
+    }
+  },
+  "gamma_no_new_saturation": true,
+  "H_checksums_sha256_expected": "409ff94360f15f08e7ad79468863bfb740be04ac57bb020be74cd97a24b770e4",
+  "repo_files_sha256": {
+    "data/manifests/original_image_index.csv": "796f11e8cf3307068824bfe868902cff23cdeaf56a68628c1e50f8193b43257f",
+    "data/derived_metrics/r1/baseline_pair_similarity_samples.npz": "084dd90e2089a62e8c35c1b484c1c137d4426b657e5aaaa112061fee23b2f482",
+    "data/summary_tables/r1/05_CKA_lineal_centrado_por_condicion.csv": "819619d07936fc18e2e4fe80db2881fbcf2ac49ccf6a4ddd507c1ac1e7bfe367"
+  },
+  "holm_family_sizes": {
+    "R1": 12,
+    "gamma": 12,
+    "zoom": 36
+  },
+  "duplicates_post_extraction": {
+    "n_pairs": 3,
+    "n_cross_class": 3,
+    "matches_expected_three": true
+  },
+  "checks": {
+    "checksum_files_verified": 47,
+    "H_checksums_sha256": "409ff94360f15f08e7ad79468863bfb740be04ac57bb020be74cd97a24b770e4",
+    "reference_pairs_new_uint8_vs_published_max_abs_err": 1.461604408448114e-06,
+    "reference_pairs_tolerance": 1e-05,
+    "CKA_R0_new_vs_published_max_abs_err": 1.4691852068260403e-08
+  },
+  "inputs_sha256": {
+    "extraction/H_checksums.sha256": "409ff94360f15f08e7ad79468863bfb740be04ac57bb020be74cd97a24b770e4",
+    "extraction/run_fingerprint.json": "b1826ae40a4d11fdeeb3bb4514755beb12f7770500a620850ef1d3713536a7ea",
+    "v2/bootstrap_indices.npy": "c2f882d2113cb86bcdcfae60d2dc3d9701494c3e7733fc96483ba8b4cecd8ff5",
+    "v2/10_extracciones_balanceadas_ids.csv": "1b1ea9eea179c9b644b9049ede9aa8042cc1e76a5f4ab0457b775165b6f85730",
+    "repo/original_image_index.csv": "796f11e8cf3307068824bfe868902cff23cdeaf56a68628c1e50f8193b43257f",
+    "repo/baseline_pair_similarity_samples.npz": "084dd90e2089a62e8c35c1b484c1c137d4426b657e5aaaa112061fee23b2f482",
+    "repo/05_CKA_lineal_centrado_por_condicion.csv": "819619d07936fc18e2e4fe80db2881fbcf2ac49ccf6a4ddd507c1ac1e7bfe367"
+  },
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3"
+  },
+  "interpretations_and_deviations": [
+    "I1–I2 de la v2 se mantienen: «diferencia pareada» = mediana de las diferencias por imagen; estabilidad y región de F2–F4 se juzgan respecto de la región esperada de la afirmación.",
+    "I3: los rótulos de normalización usan la región pico puntual de cada familia informativa («familias F2–F4 informativas que dan otra región pico»); el estado concuerda/discrepa de la v1.3 (estabilidad ≥ 0,70, 16/20 semillas, signo) se informa aparte en la tabla 08.",
+    "I4: en sparsity, A_adj usa B(b) del manuscrito incluso para gamma (texto literal de la adenda); en la cabeza ImageNet, A_adj del bloque 5 usa la referencia principal de cada condición (B_float para gamma). Los Spearman y Mann–Whitney por condición no dependen de B, porque B es constante dentro del bloque; solo el Spearman exploratorio entre condiciones depende de ello.",
+    "I5: para gamma, s_0, los logits de referencia y F2–F4 usan los originales de la ruta float; para el resto, los de la ruta uint8.",
+    "I6: «Z1r da la misma región» se evalúa como igualdad de la región pico puntual de F1 de Z1 y Z1r en cada factor.",
+    "I7: la composición de clases recalcula B con todos los pares únicos de cada extracción usando los originales de la misma ruta que la condición.",
+    "H1 (hallazgo post-extracción, no preespecificado): tres pares de imágenes idénticas en clases distintas. Se registran en la tabla 01 y no se excluyen del análisis principal."
+  ]
+}

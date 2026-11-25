@@ -1,0 +1,16 @@
+level,angle,block,cos_mean,cos_p1,cos_min,MAE_R,MAE_G,MAE_B,max_abs_diff,pct_pixels_different_mean,equivalent_cell
+low,10,Block1,1,1,1,0,0,0,0,0,True
+low,10,Block2,1,1,1,0,0,0,0,0,True
+low,10,Block3,1,1,1,0,0,0,0,0,True
+low,10,Block4,1,1,1,0,0,0,0,0,True
+low,10,Block5,1,1,1,0,0,0,0,0,True
+medium,30,Block1,1,1,1,2.0027e-06,1.95238e-06,2.1275e-06,1,0.000346397,True
+medium,30,Block2,1,1,1,2.0027e-06,1.95238e-06,2.1275e-06,1,0.000346397,True
+medium,30,Block3,1,1,1,2.0027e-06,1.95238e-06,2.1275e-06,1,0.000346397,True
+medium,30,Block4,1,1,1,2.0027e-06,1.95238e-06,2.1275e-06,1,0.000346397,True
+medium,30,Block5,1,1,0.999999,2.0027e-06,1.95238e-06,2.1275e-06,1,0.000346397,True
+high,60,Block1,1,1,1,2.30261e-06,2.2543e-06,2.56024e-06,1,0.000406378,True
+high,60,Block2,1,1,1,2.30261e-06,2.2543e-06,2.56024e-06,1,0.000406378,True
+high,60,Block3,1,1,1,2.30261e-06,2.2543e-06,2.56024e-06,1,0.000406378,True
+high,60,Block4,1,1,1,2.30261e-06,2.2543e-06,2.56024e-06,1,0.000406378,True
+high,60,Block5,1,1,1,2.30261e-06,2.2543e-06,2.56024e-06,1,0.000406378,True

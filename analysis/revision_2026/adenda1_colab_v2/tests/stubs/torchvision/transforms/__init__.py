@@ -1,0 +1,1 @@
+class InterpolationMode: BILINEAR = 'bilinear'

@@ -1,0 +1,19 @@
+control,reference,condition,level,claim_criteria,reference_block,expected_region,F1_peak_block,F1_peak_region,F1_stability,F1_effect_ok,F1_direction_ok,cumple,min_r_rb_reference,plateau,F2,F3,F4,n_informative_F2_F4,n_informative_other_region,normalization_label,verdict_v13,conservation_B_fixed,conservation_B_recomputed,class_balance_sensitive
+gamma,principal,gamma_low,low,C1,Block2,superficial,Block1,superficial,1,True,True,True,-0.405296,True,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False
+gamma,principal,gamma_medium,medium,C1,Block2,superficial,Block2,superficial,1,True,True,True,0.255759,False,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False
+gamma,principal,gamma_high,high,C1,Block2,superficial,Block2,superficial,1,True,True,True,0.638361,False,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False
+R1,principal,rotR1_low,low,C3,Block3,intermedia,Block3,intermedia,1,False,False,False,0.203523,False,discrepa,concuerda,discrepa,3,0,sin discordancia de región,"Región estable, efecto no relevante",1,1,False
+R1,principal,rotR1_medium,medium,C3,Block3,intermedia,Block3,intermedia,1,True,True,True,0.740302,False,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False
+R1,principal,rotR1_high,high,C3,Block3,intermedia,Block3,intermedia,1,True,True,True,0.736153,False,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False
+Z1,principal,zoomZ1_low,low,C5,Block5,profunda,Block4,profunda,1,False,True,False,-0.971376,True,concuerda,discrepa,concuerda,3,0,sin discordancia de región,"Región estable, efecto no relevante",1,1,False
+Z1,principal,zoomZ1_medium,medium,C5,Block5,profunda,Block4,profunda,1,False,True,False,-0.959303,True,concuerda,discrepa,discrepa,3,1,discordancia aislada,"Región estable, efecto no relevante",1,1,False
+Z1,principal,zoomZ1_high,high,C5,Block5,profunda,Block3,intermedia,0,False,True,False,-0.979892,True,discrepa,discrepa,discrepa,3,3,dependiente de la normalización,No sostenida,0,0,True
+Z1r,principal,zoomZ1r_low,low,C5,Block5,profunda,Block5,profunda,1,True,True,True,0.426777,False,concuerda,no informativa,concuerda,2,0,sin discordancia de región,Robusta,1,1,False
+Z1r,principal,zoomZ1r_medium,medium,C5,Block5,profunda,Block5,profunda,1,True,True,True,0.699951,False,concuerda,discrepa,concuerda,3,1,discordancia aislada,Parcialmente robusta,1,1,False
+Z1r,principal,zoomZ1r_high,high,C5,Block5,profunda,Block5,profunda,1,True,True,True,0.445186,False,concuerda,discrepa,concuerda,3,1,discordancia aislada,Parcialmente robusta,1,1,False
+Z2,principal,zoomZ2_low,low,C5,Block5,profunda,Block2,superficial,0,False,True,False,-0.767173,True,discrepa,no informativa,discrepa,2,2,dependiente de la normalización,No sostenida,0,0,True
+Z2,principal,zoomZ2_medium,medium,C5,Block5,profunda,Block2,superficial,0,False,True,False,-0.778353,True,discrepa,no informativa,discrepa,2,2,dependiente de la normalización,No sostenida,0,0,True
+Z2,principal,zoomZ2_high,high,C5,Block5,profunda,Block2,superficial,0,False,True,False,-0.759295,True,discrepa,no informativa,discrepa,2,2,dependiente de la normalización,No sostenida,0,0,True
+gamma,B_manuscrito,gamma_low,low,C1,Block2,superficial,Block1,superficial,1,True,True,True,-0.385345,True,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False
+gamma,B_manuscrito,gamma_medium,medium,C1,Block2,superficial,Block2,superficial,1,True,True,True,0.277274,False,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False
+gamma,B_manuscrito,gamma_high,high,C1,Block2,superficial,Block2,superficial,1,True,True,True,0.652323,False,concuerda,concuerda,concuerda,3,0,sin discordancia de región,Robusta,1,1,False

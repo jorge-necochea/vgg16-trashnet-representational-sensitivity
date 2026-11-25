@@ -1,0 +1,28 @@
+[     0.0 s] Script analyze_adenda_v2.py, SHA-256 21d7f8664994d1e509b292c0b2bc3f39400688448a234ad6eb060ef7e6c53cbc
+[     0.0 s] Adenda 1 v1.2 SHA-256 8f0c7b19079c196f2ad6220340b47adb64b7d775c32d974e8d2a6145decda156; criterios v1.3 SHA-256 492a06251c6995dd505ab1624eeaa559ca2cdd486eb7a15b8be0f4f093eddf57
+[    46.5 s] 0: checksums de la extracción verificados: 47/47; ningún archivo de más; H_checksums.sha256 = 409ff94360f15f08e7ad79468863bfb740be04ac57bb020be74cd97a24b770e4.
+[    46.5 s] 0: huella 704a9ee8c967e6cc18b6d2a5a63a48fc82716b239f6b1bd323755827861fb60f verificada; extracción completa; controles de píxeles y embeddings aprobados; GPU Tesla T4.
+[    46.5 s] 0: índice, pares de referencia y tabla CKA del repositorio verificados por SHA-256.
+[    54.1 s] 0: 35 conjuntos cargados; nombre, huella, filas, umbrales y gamma verificados en cada uno.
+[    64.4 s] 0: bootstrap congelado (2000 réplicas estratificadas) y 200 extracciones balanceadas (137 por clase) verificados por SHA-256.
+[    65.9 s] 0: B(b) del manuscrito = 0.8445, 0.8701, 0.7909, 0.6434, 0.4083; pares de referencia con los originales nuevos frente a los publicados: error máximo 1.46e-06 (≤ 1e-05).
+[    66.1 s] 1: HALLAZGO POST-EXTRACCIÓN: 3 pares de imágenes idénticas (3 entre clases distintas). Se registran y NO se excluyen del análisis principal.
+[    68.9 s] 2: B_float = 0.8436, 0.8686, 0.7887, 0.6414, 0.4076; rutas equivalentes en los 5 bloques: False; R2 equivalente a R0: True; saturación nueva en gamma (máxima por imagen, píxel o componente): 0.
+[    97.8 s] 3: gamma (principal): low: pico Block1, estab. 1.000, cumple True; medium: pico Block2, estab. 1.000, cumple True; high: pico Block2, estab. 1.000, cumple True
+[   126.2 s] 3: R1 (principal): low: pico Block3, estab. 1.000, cumple False; medium: pico Block3, estab. 1.000, cumple True; high: pico Block3, estab. 1.000, cumple True
+[   154.3 s] 3: Z1 (principal): low: pico Block4, estab. 1.000, cumple False; medium: pico Block4, estab. 1.000, cumple False; high: pico Block3, estab. 0.000, cumple False
+[   182.8 s] 3: Z1r (principal): low: pico Block5, estab. 1.000, cumple True; medium: pico Block5, estab. 1.000, cumple True; high: pico Block5, estab. 1.000, cumple True
+[   211.6 s] 3: Z2 (principal): low: pico Block2, estab. 0.000, cumple False; medium: pico Block2, estab. 0.000, cumple False; high: pico Block2, estab. 0.000, cumple False
+[   240.2 s] 3: gamma (B_manuscrito): low: pico Block1, estab. 1.000, cumple True; medium: pico Block2, estab. 1.000, cumple True; high: pico Block2, estab. 1.000, cumple True
+[   240.2 s] 3: familias de Holm: {'R1': 12, 'gamma': 12, 'zoom': 36}
+[   304.6 s] 4: CKA: 10°: D_R1=0.041, q=0.67 [0.65, 0.69], válidas 2000; 30°: D_R1=0.111, q=0.86 [0.84, 0.88], válidas 2000; 60°: D_R1=0.142, q=0.92 [0.90, 0.95], válidas 2000; CKA R0 frente a la tabla publicada: error máximo 1.47e-08
+[   525.8 s] 5: sparsity: 57 asociaciones relevantes de 165 (165 informativas).
+[   576.8 s] 6: cabeza ImageNet: 30/30 comparaciones de Mann–Whitney aplicables; Spearman entre condiciones = 0.951 (exploratorio).
+[   576.8 s] 7: C1 (gamma): se conserva.
+[   576.8 s] 7: C1 (gamma): referencia: no cambia las conclusiones.
+[   576.8 s] 7: C3 (R1): se conserva.
+[   576.8 s] 7: C4 (R1): se conserva.
+[   576.8 s] 7: Zoom: mecanismo: se elimina el lenguaje mecanicista.
+[   576.8 s] 7: Bloque 5 y cabeza ImageNet: descriptivo (sin veredicto).
+[   576.8 s] 7: Sparsity antes del GAP: asociación en algunos bloques.
+[   576.8 s] 8: registro cerrado. A continuación se calculan los checksums de salida.

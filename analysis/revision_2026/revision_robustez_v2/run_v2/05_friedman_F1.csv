@@ -1,0 +1,13 @@
+transformation,level,chi2,p,kendall_W,p_holm
+brightness,low,8361.83,0,0.827249,0
+brightness,medium,8367.39,0,0.827799,0
+brightness,high,8437.3,0,0.834716,0
+contrast,low,6485.12,0,0.641583,0
+contrast,medium,6950.13,0,0.687587,0
+contrast,high,6987.98,0,0.691331,0
+rotation,low,6454.49,0,0.638552,0
+rotation,medium,7255.05,0,0.717753,0
+rotation,high,7771.17,0,0.768814,0
+zoom,low,7908.76,0,0.782425,0
+zoom,medium,4995.19,0,0.494182,0
+zoom,high,2953.7,0,0.292214,0

@@ -1,0 +1,13 @@
+transformation,level,published_region,conservation_B_fixed,conservation_B_recomputed,first137_region_B_fixed,first137_region_B_recomputed,sensitive_to_class_balance
+brightness,low,superficial,1,1,superficial,superficial,False
+brightness,medium,superficial,1,1,superficial,superficial,False
+brightness,high,superficial,1,1,superficial,superficial,False
+contrast,low,superficial,1,1,superficial,superficial,False
+contrast,medium,superficial,1,1,superficial,superficial,False
+contrast,high,superficial,1,1,superficial,superficial,False
+rotation,low,intermedia,1,1,intermedia,intermedia,False
+rotation,medium,intermedia,1,1,intermedia,intermedia,False
+rotation,high,intermedia,1,1,intermedia,intermedia,False
+zoom,low,profunda,1,1,profunda,profunda,False
+zoom,medium,profunda,1,1,profunda,profunda,False
+zoom,high,profunda,1,1,profunda,profunda,False

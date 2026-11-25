@@ -1,0 +1,4 @@
+level,region_B_float,region_B_manuscript,cumple_B_float,cumple_B_manuscript,verdict_B_float,verdict_B_manuscript,same_region,same_cumple,same_verdict
+low,superficial,superficial,True,True,Robusta,Robusta,True,True,True
+medium,superficial,superficial,True,True,Robusta,Robusta,True,True,True
+high,superficial,superficial,True,True,Robusta,Robusta,True,True,True

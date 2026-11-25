@@ -1,0 +1,2 @@
+n_conditions,rho_mean_A_adj_B5_vs_prop_top1_change,ci_low,ci_high,n_boot_valid,magnitude,note
+30,0.950612,0.942158,0.958621,2000,grande,exploratorio; no decide ninguna interpretación

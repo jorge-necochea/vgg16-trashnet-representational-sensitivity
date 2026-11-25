@@ -1,0 +1,13 @@
+level,group,peak_block
+high,T1_bajo,Block2
+high,T2_medio,Block2
+high,T3_alto,Block2
+high,todas,Block2
+low,T1_bajo,Block1
+low,T2_medio,Block2
+low,T3_alto,Block2
+low,todas,Block2
+medium,T1_bajo,Block1
+medium,T2_medio,Block2
+medium,T3_alto,Block2
+medium,todas,Block2

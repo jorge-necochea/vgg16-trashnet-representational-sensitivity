@@ -1,0 +1,13 @@
+claim,transformation,level,reference_block,published_region,F1_stability,F1_effect_ok,F1_direction_ok,plateau,min_r_rb_reference,F2,F3,F4,n_discordant,verdict,sparsity_variant_region,sparsity_sensitive,class_balance_sensitive,F1_stability_B_reestimated
+C1,brightness,low,Block2,superficial,1,True,True,True,-0.0315567,concuerda,concuerda,concuerda,0,Robusta,superficial,False,False,1
+C1,brightness,medium,Block2,superficial,1,True,True,False,0.672785,concuerda,concuerda,concuerda,0,Robusta,superficial,False,False,1
+C1,brightness,high,Block2,superficial,1,True,True,False,0.813149,concuerda,concuerda,concuerda,0,Robusta,superficial,False,False,1
+C2,contrast,low,Block1,superficial,1,True,True,False,0.395277,concuerda,no informativa,concuerda,0,Robusta,superficial,False,False,1
+C2,contrast,medium,Block1,superficial,1,True,True,False,0.334931,concuerda,concuerda,concuerda,0,Robusta,superficial,False,False,1
+C2,contrast,high,Block1,superficial,1,True,True,False,0.225373,concuerda,concuerda,concuerda,0,Robusta,superficial,False,False,1
+C3,rotation,low,Block3,intermedia,1,False,True,True,0.0420384,concuerda,discrepa,concuerda,1,"Región estable, efecto no relevante",intermedia,False,False,1
+C3,rotation,medium,Block3,intermedia,1,True,True,False,0.819678,concuerda,concuerda,concuerda,0,Robusta,intermedia,False,False,1
+C3,rotation,high,Block3,intermedia,1,True,True,False,0.826476,concuerda,concuerda,concuerda,0,Robusta,intermedia,False,False,1
+C5,zoom,low,Block5,profunda,1,True,True,False,0.908524,concuerda,no informativa,concuerda,0,Robusta,profunda,False,False,1
+C5,zoom,medium,Block5,profunda,1,True,True,False,0.585657,concuerda,discrepa,concuerda,1,Parcialmente robusta,profunda,False,False,1
+C5,zoom,high,Block5,profunda,1,True,True,False,0.188128,concuerda,discrepa,concuerda,1,Parcialmente robusta,profunda,False,False,1
