@@ -25,6 +25,23 @@ sha256sum -c checksums.sha256
 
 The `gzip` command reconstructs the exact audited bootstrap file from the numbered parts. The last command checks the 12 public extraction records. The complete extraction manifest also records the SHA-256 of the 35 NPZ files under `conjuntos/`. Those files and the original TrashNet images are separate analysis inputs.
 
+## What GitHub alone verifies and what needs the external files
+
+GitHub is enough to verify the published tables. Repeating the real CPU analysis requires the audited extraction kept on Google Drive, whose `extraction_control/H_checksums.sha256` has SHA-256 `409ff94360f15f08e7ad79468863bfb740be04ac57bb020be74cd97a24b770e4`.
+
+From this repository alone, you can:
+
+- check all files in this folder with `checksums.sha256`, rebuild the audited bootstrap file (SHA-256 `c2f882d2113cb86bcdcfae60d2dc3d9701494c3e7733fc96483ba8b4cecd8ff5`), and check the 28 robustness outputs, the 23 addendum outputs, and 12 of the 47 extraction records;
+- run the tests that need no study data: `python analisis_cpu_v2/tests/test_analisis.py` and `python adenda1_colab_v2/tests/test_local.py --repo <clean checkout of 6672c2c>`.
+
+The following inputs are not stored in GitHub. The audited copies are kept by the author on Google Drive; new copies can be regenerated from the public TrashNet dataset (see [`docs/DATA_AVAILABILITY.md`](../../docs/DATA_AVAILABILITY.md)):
+
+- the 35 extraction NPZ files under `conjuntos/` (about 1 GB), whose SHA-256 values are listed in `extraction_control/H_checksums.sha256`;
+- the original and 12 transformed reference embeddings, used by `run_robustness_v2.py`, the GPU extraction, and `analisis_cpu_v2/tests/regresion_v2.py`;
+- the original TrashNet JPEG files and the transformed PNG files.
+
+Without these files, the tables can be checked for integrity but not recomputed. `analyze_adenda_v2.py` accepts only the audited extraction: with any other `H_checksums.sha256`, it stops with exit code 2.
+
 ## Rerun the analyses
 
 Create a clean checkout of the base commit for the `--repo` argument. The extraction script checks this commit and the tracked files it uses.
