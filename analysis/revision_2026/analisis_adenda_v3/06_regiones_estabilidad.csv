@@ -1,0 +1,73 @@
+control,reference,condition,level,family,expected_region,peak_block_mean,peak_region_mean,stability_expected_region_mean,peak_region_median,stability_expected_region_median,F3_noninformative,F3_share_at_minimum_by_block,F4_seeds_in_expected_region,F4_seed_peak_regions
+gamma,principal,gamma_low,low,F1,superficial,Block1,superficial,1,superficial,1,,,,
+gamma,principal,gamma_low,low,F2,superficial,Block1,superficial,1,superficial,,,,,
+gamma,principal,gamma_low,low,F3,superficial,Block1,superficial,1,superficial,,False,"[0.0, 0.0, 0.0016, 0.004, 0.0637]",,
+gamma,principal,gamma_low,low,F4,superficial,Block1,superficial,1,superficial,,,,20,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+gamma,principal,gamma_medium,medium,F1,superficial,Block2,superficial,1,superficial,1,,,,
+gamma,principal,gamma_medium,medium,F2,superficial,Block1,superficial,1,superficial,,,,,
+gamma,principal,gamma_medium,medium,F3,superficial,Block1,superficial,1,superficial,,False,"[0.0, 0.0, 0.0, 0.0, 0.0]",,
+gamma,principal,gamma_medium,medium,F4,superficial,Block2,superficial,1,superficial,,,,20,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+gamma,principal,gamma_high,high,F1,superficial,Block2,superficial,1,superficial,1,,,,
+gamma,principal,gamma_high,high,F2,superficial,Block1,superficial,1,superficial,,,,,
+gamma,principal,gamma_high,high,F3,superficial,Block2,superficial,1,superficial,,False,"[0.0, 0.0, 0.0, 0.0, 0.0]",,
+gamma,principal,gamma_high,high,F4,superficial,Block2,superficial,1,superficial,,,,20,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+R1,principal,rotR1_low,low,F1,intermedia,Block3,intermedia,1,intermedia,0.9825,,,,
+R1,principal,rotR1_low,low,F2,intermedia,Block3,intermedia,1,profunda,,,,,
+R1,principal,rotR1_low,low,F3,intermedia,Block3,intermedia,1,intermedia,,False,"[0.8714, 0.4044, 0.1286, 0.0047, 0.017]",,
+R1,principal,rotR1_low,low,F4,intermedia,Block3,intermedia,1,intermedia,,,,20,"[""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia""]"
+R1,principal,rotR1_medium,medium,F1,intermedia,Block3,intermedia,1,intermedia,1,,,,
+R1,principal,rotR1_medium,medium,F2,intermedia,Block3,intermedia,1,intermedia,,,,,
+R1,principal,rotR1_medium,medium,F3,intermedia,Block3,intermedia,1,intermedia,,False,"[0.1832, 0.0392, 0.0, 0.0, 0.0004]",,
+R1,principal,rotR1_medium,medium,F4,intermedia,Block3,intermedia,1,intermedia,,,,20,"[""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia""]"
+R1,principal,rotR1_high,high,F1,intermedia,Block3,intermedia,1,intermedia,1,,,,
+R1,principal,rotR1_high,high,F2,intermedia,Block3,intermedia,1,intermedia,,,,,
+R1,principal,rotR1_high,high,F3,intermedia,Block3,intermedia,1,intermedia,,False,"[0.021, 0.0024, 0.0, 0.0, 0.0]",,
+R1,principal,rotR1_high,high,F4,intermedia,Block3,intermedia,1,intermedia,,,,20,"[""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia""]"
+Z1,principal,zoomZ1_low,low,F1,profunda,Block4,profunda,1,profunda,1,,,,
+Z1,principal,zoomZ1_low,low,F2,profunda,Block4,profunda,1,profunda,,,,,
+Z1,principal,zoomZ1_low,low,F3,profunda,Block4,profunda,1,profunda,,False,"[0.0087, 0.0071, 0.0, 0.0, 0.0004]",,
+Z1,principal,zoomZ1_low,low,F4,profunda,Block4,profunda,1,profunda,,,,19,"[""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""intermedia"", ""profunda"", ""profunda"", ""profunda""]"
+Z1,principal,zoomZ1_medium,medium,F1,profunda,Block4,profunda,1,profunda,1,,,,
+Z1,principal,zoomZ1_medium,medium,F2,profunda,Block4,profunda,1,profunda,,,,,
+Z1,principal,zoomZ1_medium,medium,F3,profunda,Block3,intermedia,0,intermedia,,False,"[0.0, 0.0, 0.0, 0.0, 0.0]",,
+Z1,principal,zoomZ1_medium,medium,F4,profunda,Block4,profunda,1,profunda,,,,14,"[""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""intermedia"", ""intermedia"", ""intermedia"", ""profunda"", ""profunda"", ""profunda"", ""intermedia"", ""profunda"", ""profunda"", ""intermedia"", ""profunda"", ""intermedia"", ""profunda""]"
+Z1,principal,zoomZ1_high,high,F1,profunda,Block3,intermedia,0,intermedia,0,,,,
+Z1,principal,zoomZ1_high,high,F2,profunda,Block3,intermedia,0.0135,profunda,,,,,
+Z1,principal,zoomZ1_high,high,F3,profunda,Block3,intermedia,0,intermedia,,False,"[0.0, 0.0, 0.0, 0.0, 0.0]",,
+Z1,principal,zoomZ1_high,high,F4,profunda,Block3,intermedia,0,intermedia,,,,0,"[""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia"", ""intermedia""]"
+Z1r,principal,zoomZ1r_low,low,F1,profunda,Block5,profunda,1,profunda,1,,,,
+Z1r,principal,zoomZ1r_low,low,F2,profunda,Block5,profunda,1,profunda,,,,,
+Z1r,principal,zoomZ1r_low,low,F3,profunda,Block5,profunda,1,profunda,,True,"[0.9846, 0.9774, 0.5077, 0.036, 0.1603]",,
+Z1r,principal,zoomZ1r_low,low,F4,profunda,Block5,profunda,1,profunda,,,,20,"[""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda""]"
+Z1r,principal,zoomZ1r_medium,medium,F1,profunda,Block5,profunda,1,profunda,1,,,,
+Z1r,principal,zoomZ1r_medium,medium,F2,profunda,Block5,profunda,1,profunda,,,,,
+Z1r,principal,zoomZ1r_medium,medium,F3,profunda,Block1,superficial,0.3495,profunda,,False,"[0.3771, 0.2723, 0.0269, 0.0012, 0.017]",,
+Z1r,principal,zoomZ1r_medium,medium,F4,profunda,Block5,profunda,1,profunda,,,,20,"[""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda""]"
+Z1r,principal,zoomZ1r_high,high,F1,profunda,Block5,profunda,1,profunda,1,,,,
+Z1r,principal,zoomZ1r_high,high,F2,profunda,Block5,profunda,1,profunda,,,,,
+Z1r,principal,zoomZ1r_high,high,F3,profunda,Block1,superficial,0,superficial,,False,"[0.0123, 0.0075, 0.0, 0.0, 0.0]",,
+Z1r,principal,zoomZ1r_high,high,F4,profunda,Block5,profunda,1,profunda,,,,20,"[""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda"", ""profunda""]"
+Z2,principal,zoomZ2_low,low,F1,profunda,Block2,superficial,0,superficial,0,,,,
+Z2,principal,zoomZ2_low,low,F2,profunda,Block2,superficial,0,superficial,,,,,
+Z2,principal,zoomZ2_low,low,F3,profunda,Block2,superficial,0,superficial,,True,"[0.8682, 0.8002, 0.9897, 0.9778, 0.9945]",,
+Z2,principal,zoomZ2_low,low,F4,profunda,Block2,superficial,0,superficial,,,,0,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+Z2,principal,zoomZ2_medium,medium,F1,profunda,Block2,superficial,0,superficial,0,,,,
+Z2,principal,zoomZ2_medium,medium,F2,profunda,Block2,superficial,0,superficial,,,,,
+Z2,principal,zoomZ2_medium,medium,F3,profunda,Block2,superficial,0,superficial,,True,"[0.7408, 0.5738, 0.9588, 0.8342, 0.9656]",,
+Z2,principal,zoomZ2_medium,medium,F4,profunda,Block2,superficial,0,superficial,,,,0,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+Z2,principal,zoomZ2_high,high,F1,profunda,Block2,superficial,0,superficial,0,,,,
+Z2,principal,zoomZ2_high,high,F2,profunda,Block2,superficial,0,superficial,,,,,
+Z2,principal,zoomZ2_high,high,F3,profunda,Block2,superficial,0,superficial,,True,"[0.5429, 0.2853, 0.558, 0.2133, 0.6712]",,
+Z2,principal,zoomZ2_high,high,F4,profunda,Block2,superficial,0,superficial,,,,0,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+gamma,B_manuscrito,gamma_low,low,F1,superficial,Block1,superficial,1,superficial,1,,,,
+gamma,B_manuscrito,gamma_low,low,F2,superficial,Block1,superficial,1,superficial,,,,,
+gamma,B_manuscrito,gamma_low,low,F3,superficial,Block1,superficial,1,superficial,,False,"[0.0, 0.0, 0.0016, 0.004, 0.0637]",,
+gamma,B_manuscrito,gamma_low,low,F4,superficial,Block1,superficial,1,superficial,,,,20,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+gamma,B_manuscrito,gamma_medium,medium,F1,superficial,Block2,superficial,1,superficial,1,,,,
+gamma,B_manuscrito,gamma_medium,medium,F2,superficial,Block1,superficial,1,superficial,,,,,
+gamma,B_manuscrito,gamma_medium,medium,F3,superficial,Block1,superficial,1,superficial,,False,"[0.0, 0.0, 0.0, 0.0, 0.0]",,
+gamma,B_manuscrito,gamma_medium,medium,F4,superficial,Block2,superficial,1,superficial,,,,20,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"
+gamma,B_manuscrito,gamma_high,high,F1,superficial,Block2,superficial,1,superficial,1,,,,
+gamma,B_manuscrito,gamma_high,high,F2,superficial,Block1,superficial,1,superficial,,,,,
+gamma,B_manuscrito,gamma_high,high,F3,superficial,Block2,superficial,1,superficial,,False,"[0.0, 0.0, 0.0, 0.0, 0.0]",,
+gamma,B_manuscrito,gamma_high,high,F4,superficial,Block2,superficial,1,superficial,,,,20,"[""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial"", ""superficial""]"

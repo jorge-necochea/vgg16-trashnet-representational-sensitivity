@@ -1,0 +1,6 @@
+block,B_uint8_recomputed,B_float,cos_uint8_vs_float_mean,cos_uint8_vs_float_p1,cos_uint8_vs_float_min,routes_equivalent_block
+Block1,0.844513,0.843551,0.999977,0.999919,0.9999,True
+Block2,0.870053,0.868644,0.998136,0.993144,0.990791,False
+Block3,0.790945,0.788684,0.998247,0.992593,0.985013,False
+Block4,0.643394,0.641366,0.998181,0.991314,0.98478,False
+Block5,0.408349,0.407632,0.998132,0.990617,0.986631,False
