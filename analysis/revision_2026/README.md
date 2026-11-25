@@ -10,7 +10,7 @@ This directory contains the code, controls, and reported results for the robustn
 | [`analisis_cpu_v3/`](analisis_cpu_v3/) | Current CPU analysis script, [execution instructions](analisis_cpu_v3/INSTRUCCIONES_ANALISIS.md), and tests. |
 | [`analisis_adenda_v3/`](analisis_adenda_v3/) | Current [results](analisis_adenda_v3/19_redaccion_interpretaciones.md) and supporting CSV tables for gamma, rotation, zoom, pre-GAP sparsity, and the pretrained ImageNet head. |
 | [`analisis_cpu_v2/`](analisis_cpu_v2/), [`analisis_adenda_v2/`](analisis_adenda_v2/) | Previous version, kept for traceability. Version 3 applies the documented deviation D2. |
-| E1 zoom CKA | [Analysis script, instructions, and tests](cka_zoom_v1_1.zip) and [output tables, manifest, and checksums](analisis_cka_zoom_v1.zip). |
+| E1 zoom CKA | [Version 1.1 script](cka_zoom_v1_1/cka_zoom_controles.py), [Colab instructions](cka_zoom_v1_1/INSTRUCCIONES_CKA_ZOOM.md), and [Tables 20–22, manifest, and checksums](analisis_cka_zoom_v1/). |
 
 ### Deviation D2 (2026-11-25)
 
@@ -25,7 +25,7 @@ No computation, verdict, or interpretation decision changed. Sixteen tables are 
 
 ### Descriptive zoom analysis (E1)
 
-E1 was added after the addendum was frozen. It reports centered linear CKA for the original zoom and all three controls using the audited v3 implementation and the same 2,000 frozen bootstrap resamples. The outputs include blockwise CKA, Block1-minus-Block5 differences, and paired differences between each control and the original zoom.
+E1 was added after the addendum was frozen. It reports centered linear CKA for the original zoom and all three controls using the audited v3 implementation and the same 2,000 frozen bootstrap resamples. The outputs include blockwise CKA, Block1-minus-Block5 differences, and paired differences between each control and the original zoom. The audited archives are available as the [code ZIP](cka_zoom_v1_1.zip) and the [results ZIP](analisis_cka_zoom_v1.zip).
 
 ## Verify the results
 
@@ -38,10 +38,11 @@ sha256sum -c checksums.sha256
   sha256sum -c checksums_outputs.sha256)
 (cd analisis_adenda_v3 && sha256sum -c checksums_outputs.sha256)
 (cd analisis_adenda_v2 && sha256sum -c checksums_outputs.sha256)
+(cd analisis_cka_zoom_v1 && sha256sum -c checksums_outputs.sha256)
 (cd extraction_control && awk '$2 !~ /^conjuntos\//' H_checksums.sha256 | sha256sum -c -)
 ```
 
-The `gzip` command reconstructs the exact audited bootstrap file from the numbered parts. The last command checks the 12 public extraction records. The complete extraction manifest also records the SHA-256 of the 35 NPZ files under `conjuntos/`. Those files and the original TrashNet images are separate analysis inputs. The top-level checksums also verify both E1 archives. The E1 results archive contains its own checksums for the three tables, the manifest, and the execution log.
+The `gzip` command reconstructs the exact audited bootstrap file from the numbered parts. The last command checks the 12 public extraction records. The complete extraction manifest also records the SHA-256 of the 35 NPZ files under `conjuntos/`. Those files and the original TrashNet images are separate analysis inputs. The top-level checksums cover both E1 archives and the individual files. The E1 results checksums cover the three tables, the manifest, and the execution log.
 
 ## What GitHub alone verifies and what needs the external files
 
@@ -50,7 +51,7 @@ GitHub is enough to verify the published tables. Repeating the real CPU analysis
 From this repository alone, you can:
 
 - check all files in this folder with `checksums.sha256`, rebuild the audited bootstrap file (SHA-256 `c2f882d2113cb86bcdcfae60d2dc3d9701494c3e7733fc96483ba8b4cecd8ff5`), and check the 28 robustness outputs, the 23 outputs of each addendum analysis version (v3 current, v2 previous), and 12 of the 47 extraction records;
-- run the tests that need no study data: `python analisis_cpu_v3/tests/test_analisis.py` and `python adenda1_colab_v2/tests/test_local.py --repo <clean checkout of 6672c2c>`.
+- run the tests that need no study data: `python analisis_cpu_v3/tests/test_analisis.py`, `python adenda1_colab_v2/tests/test_local.py --repo <clean checkout of 6672c2c>`, and `python cka_zoom_v1_1/tests/test_cka_zoom.py --analysis-dir analisis_cpu_v3`.
 
 The following inputs are not stored in GitHub. The audited copies are kept by the author on Google Drive; new copies can be regenerated from the public TrashNet dataset (see [`docs/DATA_AVAILABILITY.md`](../../docs/DATA_AVAILABILITY.md)):
 

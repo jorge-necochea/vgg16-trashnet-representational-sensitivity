@@ -1,0 +1,48 @@
+{
+  "analysis": "E1: CKA bajo los controles de zoom (descriptivo, no preespecificado; sin veredicto)",
+  "script": "cka_zoom_controles.py",
+  "script_sha256": "eb847a941a074344a7e2e481515724b339a11232461c5c17fbbdbccd5bd2ee77",
+  "analyze_adenda_v3_sha256": "6e797590c63f57e17d27619039c6ea6008fcfe2630a36fc4c7821b5d397b2a7e",
+  "test_fixture": false,
+  "valid_for_manuscript": true,
+  "extraction_fingerprint_id": "704a9ee8c967e6cc18b6d2a5a63a48fc82716b239f6b1bd323755827861fb60f",
+  "checks": {
+    "checksum_files_verified": 47,
+    "H_checksums_sha256": "409ff94360f15f08e7ad79468863bfb740be04ac57bb020be74cd97a24b770e4",
+    "CKA_Z0_new_vs_published_max_abs_err": 1.1868204530252058e-08,
+    "CKA_Z0_cells_verified": 15,
+    "CKA_Z0_absolute_tolerance": 1e-06
+  },
+  "repo_files_sha256": {
+    "data/manifests/original_image_index.csv": "796f11e8cf3307068824bfe868902cff23cdeaf56a68628c1e50f8193b43257f",
+    "data/derived_metrics/r1/baseline_pair_similarity_samples.npz": "084dd90e2089a62e8c35c1b484c1c137d4426b657e5aaaa112061fee23b2f482",
+    "data/summary_tables/r1/05_CKA_lineal_centrado_por_condicion.csv": "819619d07936fc18e2e4fe80db2881fbcf2ac49ccf6a4ddd507c1ac1e7bfe367"
+  },
+  "frozen_inputs_sha256": {
+    "bootstrap_indices_sha256": "c2f882d2113cb86bcdcfae60d2dc3d9701494c3e7733fc96483ba8b4cecd8ff5",
+    "balanced_draws_sha256": "1b1ea9eea179c9b644b9049ede9aa8042cc1e76a5f4ab0457b775165b6f85730"
+  },
+  "n_boot": 2000,
+  "conditions": [
+    "zoom_low",
+    "zoom_medium",
+    "zoom_high",
+    "zoomZ1_low",
+    "zoomZ1_medium",
+    "zoomZ1_high",
+    "zoomZ1r_low",
+    "zoomZ1r_medium",
+    "zoomZ1r_high",
+    "zoomZ2_low",
+    "zoomZ2_medium",
+    "zoomZ2_high"
+  ],
+  "reference": "original_uint8 (ruta uint8), como el CKA de C4",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3"
+  },
+  "note": "El zoom original se denomina Z0 (conjuntos zoom_low/medium/high de la extracción). La tabla 22 compara cada control con Z0 bloque a bloque, con las mismas réplicas bootstrap."
+}

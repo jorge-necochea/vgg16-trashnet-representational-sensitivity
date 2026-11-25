@@ -1,0 +1,13 @@
+variant,level,factor,D_B1_minus_B5,D_ci_low,D_ci_high,argmin_block,increasing_steps
+Z0,low,1.1,0.0137577,0.0120728,0.014988,Block5,Block2→Block3 (0.989 → 0.989)
+Z1,low,1.1,0.0515618,0.0478438,0.0542155,Block5,Block2→Block3 (0.982 → 0.986)
+Z1r,low,1.1,0.037556,0.0348885,0.0392969,Block5,
+Z2,low,1.1,0.00143397,0.00105227,0.00180011,Block5,"Block1→Block2 (0.998 → 0.999), Block2→Block3 (0.999 → 0.999)"
+Z0,medium,1.25,0.0137579,0.00837065,0.0183671,Block5,"Block2→Block3 (0.945 → 0.948), Block3→Block4 (0.948 → 0.953)"
+Z1,medium,1.25,0.055598,0.0481545,0.0614485,Block5,Block2→Block3 (0.934 → 0.947)
+Z1r,medium,1.25,0.0907418,0.08378,0.0957225,Block5,
+Z2,medium,1.25,0.00212607,0.00153596,0.00269268,Block5,"Block1→Block2 (0.997 → 0.998), Block2→Block3 (0.998 → 0.998)"
+Z0,high,1.5,-0.00126344,-0.0156405,0.0112038,Block2,"Block2→Block3 (0.842 → 0.853), Block3→Block4 (0.853 → 0.875)"
+Z1,high,1.5,0.039394,0.024913,0.0523656,Block5,Block2→Block3 (0.823 → 0.857)
+Z1r,high,1.5,0.155278,0.138152,0.168326,Block5,
+Z2,high,1.5,0.00436006,0.00327015,0.00540695,Block5,"Block1→Block2 (0.994 → 0.996), Block2→Block3 (0.996 → 0.997)"
